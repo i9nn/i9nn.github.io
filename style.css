@@ -1,3 +1,13 @@
+.mainTitle {
+    border-style: solid;
+    border-color: #659a9f;
+    border-radius: 1vmin;
+    
+    color: #659a9f; 
+    font-family: Helvetica; 
+    font-size: 500%
+}
+
 h1 {
     text-align: center;
     vertical-align: middle;
