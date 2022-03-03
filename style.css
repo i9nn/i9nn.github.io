@@ -12,6 +12,11 @@ h1 {
     vertical-align: middle;
 }
 
+h1:hover {
+    -webkit-text-stroke: 1px #659a9f;
+    color: transparent;
+  }
+
 p {
     font-family: Helvetica; 
 
