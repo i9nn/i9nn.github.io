@@ -22,6 +22,7 @@ h1 {
 }
 
 h1:hover, a:hover {
+    animation: fadeIn 5s;
     color: transparent;
     -webkit-text-stroke: 3px #659a9f;
 }
