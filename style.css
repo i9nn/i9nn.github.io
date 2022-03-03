@@ -14,7 +14,7 @@ h1 {
 
 h1:hover {
     color: transparent;
-    -webkit-text-stroke: 1px #659a9f;
+    -webkit-text-stroke: 3px #659a9f;
 }
 
 p {
