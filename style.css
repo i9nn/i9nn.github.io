@@ -7,6 +7,10 @@
     font-family: Helvetica; 
 }
 
+a {
+    color: white;
+}
+
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -17,7 +21,7 @@ h1 {
     vertical-align: middle;
 }
 
-h1:hover {
+h1:hover, a:hover {
     color: transparent;
     -webkit-text-stroke: 3px #659a9f;
 }
