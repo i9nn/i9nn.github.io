@@ -13,9 +13,9 @@ h1 {
 }
 
 h1:hover {
-    -webkit-text-stroke: 1px #659a9f;
     color: transparent;
-  }
+    -webkit-text-stroke: 1px #659a9f;
+}
 
 p {
     font-family: Helvetica; 
