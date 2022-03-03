@@ -11,6 +11,7 @@ h1 {
 p {
     font-family: Helvetica;
     font-size: 5vmin; 
+
     text-align: center
 }
 
@@ -21,5 +22,6 @@ p {
     border-radius: 1vmin;
 
     color: #659a9f; 
+    
     font-size: 500%
 }
