@@ -1,3 +1,4 @@
+/* markdown*/
 * {
     font-family: Helvetica; 
 }
@@ -12,6 +13,7 @@ p {
     text-align: center
 }
 
+/* classes */
 .main_title {
     border-style: solid;
     border-color: #87ced4;
