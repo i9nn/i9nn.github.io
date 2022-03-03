@@ -22,6 +22,10 @@ p {
     border-radius: 1vmin;
 
     color: #659a9f; 
-    
+
     font-size: 500%
+}
+
+*highlight {
+    color: #659a9f;
 }
