@@ -71,7 +71,7 @@ h1:hover {
     color: #659a9f;
 }
 
-.shrink-on-hover {
+.shrink_hover {
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -83,7 +83,7 @@ h1:hover {
     transition-property: transform;
 }
 
-.shrink-on-hover:hover, .shrink-on-hover:focus, .shrink-on-hover:active {
+.shrink_hover:hover, .shrink_hover:focus, .shrink_hover:active {
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
 }
