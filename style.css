@@ -53,23 +53,17 @@ h1:hover {
 .first_section > div {
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
-    margin-top: -9px;
+    left: 50%;
+
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
 }
 
 .main_title {
     color: #659a9f; 
     font-size: 750%;
     vertical-align: middle;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
 }
 
 
