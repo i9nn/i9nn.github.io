@@ -50,17 +50,9 @@ h1:hover {
     white-space: nowrap; 
 }
 
-.first_section > h1 {
+.first_section > div {
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
-    margin-top: -9px;
-}
-
-.first_section > p {
-    position: absolute;
-    top: 60%;
     left: 0;
     right: 0;
     margin-top: -9px;
