@@ -53,6 +53,7 @@ h1:hover {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
 
@@ -65,7 +66,7 @@ h1:hover {
 
 .lower_heading {
     color: #000;
-    font-size: 750%;
+    font-size: 550%;
 }
 
 .highlight {
