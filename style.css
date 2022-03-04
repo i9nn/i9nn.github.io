@@ -48,6 +48,10 @@ a:hover {
 .main_title {
     color: #659a9f; 
     font-size: 750%;
+
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
 }
 
 .lower_heading {
