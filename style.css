@@ -86,6 +86,6 @@ h1:hover {
 }
 
 .shrink-on-hover:hover, .shrink-on-hover:focus, .shrink-on-hover:active {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
 }
