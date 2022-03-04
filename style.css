@@ -50,6 +50,14 @@ h1:hover {
     white-space: nowrap; 
 }
 
+.first_section > h1 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -9px;
+}
+
 .main_title {
     color: #659a9f; 
     font-size: 750%;
