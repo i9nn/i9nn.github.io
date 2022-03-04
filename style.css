@@ -12,21 +12,15 @@ a {
     text-decoration: none;
 }
 
-
-html, body {
+body, html {
     max-width: 100%;
     overflow-x: hidden;
 }
 
 h1 {
+    animation: fadeIn 5s;
     text-align: center;
     vertical-align: middle;
-}
-
-h1:hover {
-    animation: fadeIn 5s;
-    color: transparent;
-    -webkit-text-stroke: 3px #659a9f;
 }
 
 p {
@@ -44,7 +38,18 @@ a:hover {
     -webkit-text-stroke: 0.5px #44686b;
 }
 
+h1:hover {
+    color: transparent;
+    -webkit-text-stroke: 3px #659a9f;
+}
+
 /* classes */
+.first_section {
+    background: linear-gradient(90deg, rgba(101, 154, 159, 0.4) 0%, rgba(151, 194, 199, 0.4) 100%);
+    height: 80vh; 
+    white-space: nowrap; 
+}
+
 .main_title {
     color: #659a9f; 
     font-size: 750%;
