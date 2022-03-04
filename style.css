@@ -8,7 +8,7 @@
 }
 
 a {
-    color: white;
+    color: rgb(39, 39, 39);
     text-decoration: none;
 }
 
@@ -28,7 +28,7 @@ p {
 
 /* effects */
 a:link, a:visited {
-    color: white;
+    color: rgb(39, 39, 39);
 }
   
 a:hover {
