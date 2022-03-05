@@ -4,7 +4,6 @@
 
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
 
 a {
@@ -33,7 +32,8 @@ a:link, a:visited {
   
 a:hover {
     color: transparent;
-    -webkit-text-stroke: 0.5px #44686b;
+    text-shadow: 0 0 20px #659a9f;
+    -webkit-text-stroke: 0.5px #2c4345;
 }
 
 h1:hover {
@@ -48,6 +48,23 @@ h1:hover {
     white-space: nowrap; 
 }
 
+.main_title {
+    color: #659a9f; 
+    font-size: 21vh;
+    text-shadow: 0 0 20px #659a9f;
+    
+}
+
+.lower_heading {
+    color: #000;
+    font-size: 10vh;
+}
+
+.highlight {
+    color: #659a9f;
+}
+
+/* utility classes */
 .centered_box {
     position: relative;
     top: 50%;
@@ -55,20 +72,6 @@ h1:hover {
 
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-}
-
-.main_title {
-    color: #659a9f; 
-    font-size: 15vw;
-}
-
-.lower_heading {
-    color: #000;
-    font-size: 10vw;
-}
-
-.highlight {
-    color: #659a9f;
 }
 
 .shrink_hover {
