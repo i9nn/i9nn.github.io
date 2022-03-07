@@ -57,6 +57,7 @@ h1:hover {
 .lower_heading {
     color: #000;
     font-size: 10vh;
+    text-shadow: 0 0 20px #aaa;
 }
 
 .highlight {
@@ -83,6 +84,12 @@ h1:hover {
 
     -webkit-transition-property: transform;
     transition-property: transform;
+}
+
+/* class effects */
+
+.lower_heading:hover {
+    text-shadow: 0 0 20px #659a9f;
 }
 
 .shrink_hover:hover, .shrink_hover:focus, .shrink_hover:active {
