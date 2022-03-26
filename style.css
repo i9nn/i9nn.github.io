@@ -49,8 +49,9 @@ h1:hover {
 .main_title {
     color: #659a9f; 
     font-size: 15vw;
-    text-shadow: 0 0 20px #659a9f;
     
+    font-family: "Rubik Mono One"; 
+    text-shadow: 0 0 20px #659a9f;
 }
 
 .lower_heading {
@@ -89,4 +90,5 @@ h1:hover {
 .shrink_hover:hover, .shrink_hover:focus, .shrink_hover:active {
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
+    
 }
