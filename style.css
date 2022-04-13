@@ -90,12 +90,31 @@ h1:hover {
     transition-property: transform;
 }
 
+.grow_hover {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
 /* class effects */
 .lower_heading:hover {
     text-shadow: 0 0 20px #659a9f;
 }
 
-.shrink_hover:hover, .shrink_hover:focus, .shrink_hover:active {
+.grow_hover:hover, .grow_hover:focus, .grow_hover:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
+    z-index: 1000; 
+}
+
+.shrink_hover:hover, .shrink_hover:focus, .shrink_hover:active {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    z-index: 1000; 
 }
