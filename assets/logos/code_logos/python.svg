@@ -1,14 +1,16 @@
+<!-- Python -->
+
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
     class="iconify iconify--logos" width="6.06em" height="6em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 255"
     data-icon="logos:python">
     <defs>
         <linearGradient id="IconifyId-17f653f1ca7-2b9e72-0" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
-            <stop offset="0%" stop-color="#659a9f"></stop>
-            <stop offset="100%" stop-color="#659a9f"></stop>
+            <stop offset="0%" stop-color="#387EB8"></stop>
+            <stop offset="100%" stop-color="#366994"></stop>
         </linearGradient>
         <linearGradient id="IconifyId-17f653f1ca7-2b9e72-1" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
-            <stop offset="0%" stop-color="#3e5e61"></stop>
-            <stop offset="100%" stop-color="#3e5e61"></stop>
+            <stop offset="0%" stop-color="#FFE052"></stop>
+            <stop offset="100%" stop-color="#FFC331"></stop>
         </linearGradient>
     </defs>
     <path fill="url(#IconifyId-17f653f1ca7-2b9e72-0)"
