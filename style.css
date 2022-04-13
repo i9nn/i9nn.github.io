@@ -1,4 +1,4 @@
-/* markdown   */
+/* markdown */
 * {
     font-family: Helvetica; 
     margin: 0;
@@ -8,6 +8,7 @@
 a {
     color: rgb(39, 39, 39);
     text-decoration: none;
+    transition: all 0.7s;
 }
 
 body, html {
@@ -32,6 +33,7 @@ a:hover {
     color: transparent;
     text-shadow: 0 0 20px #659a9f;
     -webkit-text-stroke: 0.5px #2c4345;
+    transform: rotate(180deg);
 }
 
 h1:hover {
@@ -47,7 +49,7 @@ h1:hover {
 }
 
 .main_title {
-    color: #cadfdd; 
+    color: #d5e9e7; 
     font-size: 15vw;
     
     font-family: "Rubik Mono One"; 
@@ -94,6 +96,6 @@ h1:hover {
 }
 
 .shrink_hover:hover, .shrink_hover:focus, .shrink_hover:active {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
