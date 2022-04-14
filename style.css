@@ -16,12 +16,8 @@ body, html {
     overflow-x: hidden;
 }
 
-h1 {
+h1, p {
     text-align: center;
-}
-
-p {
-    text-align: center
 }
 
 /* effects */
@@ -32,6 +28,7 @@ a:link, a:visited {
 a:hover {
     color: transparent;
     text-shadow: 0 0 20px #659a9f;
+
     -webkit-text-stroke: 0.5px #2c4345;
     transform: rotate(180deg);
 }
@@ -48,18 +45,16 @@ h1:hover {
     white-space: nowrap; 
 }
 
-.main_title {
-    color: #d5e9e7; 
-    font-size: 15vw;
-    
-    font-family: "Rubik Mono One"; 
-    text-shadow: 0 0 20px #659a9f;
-}
-
 .lower_heading {
     color: #000;
     font-size: 10vh;
     text-shadow: 0 0 20px #aaa;
+}
+
+.main_title {
+    color: #d5e9e7; 
+    font-size: 15vw;
+    text-shadow: 0 0 20px #659a9f;
 }
 
 /* utility classes */
@@ -72,45 +67,42 @@ h1:hover {
     -ms-transform: translateY(-50%);
 }
 
+.grow_hover, .shrink_hover {
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
 .logo_box {
     text-align: center;
     height: 6em; 
     width: 6em
 }
 
-.shrink_hover {
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
-.grow_hover {
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-
-    -webkit-transition-property: transform;
-    transition-property: transform;
-}
-
 /* class effects */
-.lower_heading:hover {
-    text-shadow: 0 0 20px #659a9f;
-}
 
 .grow_hover:hover, .grow_hover:focus, .grow_hover:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     z-index: 1000; 
+}
+
+.lower_heading:hover {
+    text-shadow: 0 0 20px #659a9f;
+}
+
+.rot_back:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.rot_front:hover {
+    transform: scale(1.1) rotate(-5deg);
 }
 
 .shrink_hover:hover, .shrink_hover:focus, .shrink_hover:active {
