@@ -1,14 +1,25 @@
+/* 
+    Here's my theme colors:
+
+    #4b4e6d <-- Navy blue
+    #a0d2db <-- Lighter blue
+    #bee7e8 <-- Lighterer blue
+    #ffffff <-- White
+    #f4d35e <-- Yellow
+
+*/
+
 /* markdown */
 * {
-    font-family: Helvetica; 
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
+    text-align: center; 
 }
 
 a {
-    color: rgb(39, 39, 39);
+    color: #f4d35e;
     text-decoration: none;
-    transition: all 0.7s;
 }
 
 body, html {
@@ -16,49 +27,47 @@ body, html {
     overflow-x: hidden;
 }
 
-h1, p {
-    text-align: center;
-}
-
 /* effects */
 a:link, a:visited {
-    color: rgb(39, 39, 39);
+    color: #f4d35e;
 }
   
 a:hover {
     color: transparent;
-    text-shadow: 0 0 20px #659a9f;
+    text-shadow: 0 0 20px #fff;
 
-    -webkit-text-stroke: 0.5px #2c4345;
-    transform: rotate(180deg);
+    -webkit-text-stroke: 0.5px #fff;
 }
 
 h1:hover {
     color: transparent;
-    -webkit-text-stroke: 3px #659a9f;
+    -webkit-text-stroke: 3px #BEE7E8;
 }
 
 /* classes */
-.first_section {
-    background: linear-gradient(90deg, rgba(101, 154, 159, 0.4) 0%, rgba(151, 194, 199, 0.4) 100%);
+
+/* top section */
+.first-section {
+    background: linear-gradient(180deg, #4b4e6d, #383b52);
     height: 80vh; 
     white-space: nowrap; 
 }
 
-.lower_heading {
+.main-title {
+    color: #a0d2db; 
+    font-size: 15vw;
+    text-shadow: 0 0 20px #bee7e868;
+}
+
+
+.lower-heading {
     color: #000;
     font-size: 10vh;
     text-shadow: 0 0 20px #aaa;
 }
 
-.main_title {
-    color: #d5e9e7; 
-    font-size: 15vw;
-    text-shadow: 0 0 20px #659a9f;
-}
-
 /* utility classes */
-.centered_box {
+.centered-box {
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -67,7 +76,7 @@ h1:hover {
     -ms-transform: translateY(-50%);
 }
 
-.grow_hover, .shrink_hover {
+.grow-hover, .shrink-hover {
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
@@ -79,33 +88,27 @@ h1:hover {
     transition-property: transform;
 }
 
-.logo_box {
-    text-align: center;
-    height: 6em; 
-    width: 6em
-}
-
 /* class effects */
 
-.grow_hover:hover, .grow_hover:focus, .grow_hover:active {
+.grow-hover:hover, .grow-hover:focus, .grow-hover:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     z-index: 1000; 
 }
 
-.lower_heading:hover {
+.lower-heading:hover {
     text-shadow: 0 0 20px #659a9f;
 }
 
-.rot_back:hover {
+.rot-back:hover {
     transform: scale(1.1) rotate(5deg);
 }
 
-.rot_front:hover {
+.rot-front:hover {
     transform: scale(1.1) rotate(-5deg);
 }
 
-.shrink_hover:hover, .shrink_hover:focus, .shrink_hover:active {
+.shrink-hover:hover, .shrink-hover:focus, .shrink-hover:active {
     -webkit-transform: scale(0.95);
     transform: scale(0.95);
     z-index: 1000; 
