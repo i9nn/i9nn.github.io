@@ -8,6 +8,8 @@ to work on as I learned more about HTML + CSS.
 
 You can always message me on GitHub. 
 
+oh, and neck & wrist don't lie!!
+
 -->
 
 <!DOCTYPE html>
@@ -21,7 +23,10 @@ You can always message me on GitHub.
         <!-- preloaded Monserrat fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,600&display=swap">
+
+        <!-- animation sourcing -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     </head>
 
     <body>
@@ -32,9 +37,9 @@ You can always message me on GitHub.
             <div class="centered-box">
 
                 <!-- main title -->
-                <h1 class="grow-hover main-title">
+                <h1 class="main-title animate__animated animate__flipInX">
                     <i>
-                        &amp; i9nn
+                        <p class="grow-hover">&amp; i9nn</p>
                     </i>
                 </h1>
 
@@ -58,26 +63,28 @@ You can always message me on GitHub.
             <!-- arrow -->
             <div class="centered-block">
                 <br>
-                <h1 style="font-family: Helvetica; font-size: 10vh; color: transparent; -webkit-text-stroke: 2px #171717;">
+                <h1 class="animate__animated animate__fadeIn animate__delay-1s" style="font-family: Helvetica; font-size: 8vh; color: transparent; -webkit-text-stroke: 2px #171717;">
                     ↓
                 </h1>
             </div>
 
         </div>
 
+        <div class="spacer-bar"></div>
+
         <!-- text bar -->
         <div class="text-section">
-            <div class="centered-box">
+            <div class="text-section-wrapper centered-box">
 
                 <!-- caption title -->
-                <p style="font-size: 4vh; color: transparent; -webkit-text-stroke: 1px #4b4e6d;">
+                <p class="waving-box animate__animated" style="font-size: 4.2vh; color: transparent; -webkit-text-stroke: 1px #4b4e6d;">
                     welcome!!! 👋
                 </p>
     
                 <!-- programming caption -->
-                <p style="font-size: 2.5vh">
-                    my name is <b>Ian</b>, and I am a high-school student
-                    <br>from both the east and west coast.
+                <p  style="font-size: 2.6vh">
+                    my name is <b>Ian</b>, and I am a high-school 
+                    <br>student from both the east and west coast.
                     
                     <br><br>i've been developing ever since i 
                     <br>got access to my dad's desktop and i started
@@ -88,7 +95,7 @@ You can always message me on GitHub.
             </div>
         </div>
 
-        <div class="spacer-bar"></div>
+        <div class="smaller-spacer-bar"></div>
         
         <!-- language describer -->
         <div style="height: 18vh">
@@ -110,19 +117,19 @@ You can always message me on GitHub.
         <div style="text-align: center">
 
             <!-- logo box -->
-                <!-- lua --> <a href="https://www.lua.org"><img class="grow-hover rot-back-slight" src="assets/logos/code-logos/lua.svg"></a>
-                <!-- java --> <a href="https://www.java.com"><img class="grow-hover rot-front" src="assets/logos/code-logos/java.svg"></a>
-                <!-- html --> <a href="https://en.wikipedia.org/wiki/HTML"><img class="grow-hover rot-back-slight" src="assets/logos/code-logos/html.svg"></a>
-                <!-- javascript --> <a href="https://www.javascript.com"><img class="grow-hover rot-front" src="assets/logos/code-logos/js.svg"></a>
+                <!-- lua --> <a href="https://www.lua.org"><img class="grow-hover rot-back-slight logo" src="assets/logos/code-logos/lua.svg"></a>
+                <!-- java --> <a href="https://www.java.com"><img class="grow-hover rot-front logo" src="assets/logos/code-logos/java.svg"></a>
+                <!-- html --> <a href="https://en.wikipedia.org/wiki/HTML"><img class="grow-hover rot-back-slight logo" src="assets/logos/code-logos/html.svg"></a>
+                <!-- javascript --> <a href="https://www.javascript.com"><img class="grow-hover rot-front logo" src="assets/logos/code-logos/js.svg"></a>
                     <br>
-                <!-- css --> <a href="https://en.wikipedia.org/wiki/CSS"><img class="grow-hover rot-back" src="assets/logos/code-logos/css.svg"></a>
-                <!-- python --> <a href="https://www.python.org"><img class="grow-hover rot-front-slight" src="assets/logos/code-logos/python.svg"></a>
-                <!-- c++ --> <a href="https://www.cplusplus.com/"><img class="grow-hover rot-back-slight" src="assets/logos/code-logos/cpp.svg"></a>
-                <!-- typescript --> <a href="https://www.typescriptlang.org/"><img class="grow-hover rot-front" src="assets/logos/code-logos/ts.svg"></a>
+                <!-- css --> <a href="https://en.wikipedia.org/wiki/CSS"><img class="grow-hover rot-back logo" src="assets/logos/code-logos/css.svg"></a>
+                <!-- python --> <a href="https://www.python.org"><img class="grow-hover rot-front-slight logo" src="assets/logos/code-logos/python.svg"></a>
+                <!-- c++ --> <a href="https://www.cplusplus.com/"><img class="grow-hover rot-back-slight logo" src="assets/logos/code-logos/cpp.svg"></a>
+                <!-- typescript --> <a href="https://www.typescriptlang.org/"><img class="grow-hover rot-front logo" src="assets/logos/code-logos/ts.svg"></a>
 
             <!-- caption -->
             <p style="font-size: 1.9vh">
-                <i>ranked in order of competency and knowledge from left to right.</i>
+                <i>ranked in order of competency and knowledge.</i>
             </p><br>
 
         </div>
@@ -135,22 +142,29 @@ You can always message me on GitHub.
                 <i>editors:</i>
             </h1>
 
+            <!-- caption -->
+            <p style="font-size: 2vh"> 
+                <i>click on an icon to learn more!</i>
+            </p>
+
         </div>
         
         <div style="text-align: center">
 
             <!-- logo box -->
-                <!-- github --> <a href="https://github.com"><img class="grow-hover rot-back-slight" src="assets/logos/editor-logos/github.svg"></a>
-                <!-- vscode --> <a href="https://code.visualstudio.com/"><img class="grow-hover rot-front" src="assets/logos/editor-logos/vscode.svg"></a>
-                <!-- discord --> <a href="https://discord.com/"><img class="grow-hover rot-back-slight" src="assets/logos/editor-logos/discord.svg"></a>
-                <!-- git --> <a href="https://git-scm.com/"><img class="grow-hover rot-front" src="assets/logos/editor-logos/git.svg"></a>
+                <!-- github --> <a href="https://github.com"><img class="grow-hover rot-back-slight logo" src="assets/logos/editor-logos/github.svg"></a>
+                <!-- vscode --> <a href="https://code.visualstudio.com/"><img class="grow-hover rot-front logo" src="assets/logos/editor-logos/vscode.svg"></a>
+                <!-- discord --> <a href="https://discord.com/"><img class="grow-hover rot-back-slight logo" src="assets/logos/editor-logos/discord.svg"></a>
+                <!-- git --> <a href="https://git-scm.com/"><img class="grow-hover rot-front logo" src="assets/logos/editor-logos/git.svg"></a>
 
             <!-- caption -->
             <p style="font-size: 1.9vh">
                 <i>ranked by how often I use them.</i>
-            </p>
+            </p><br>
 
         </div>
+
+        <div class="smaller-spacer-bar"></div>
 
         <!-- albums describer -->
         <div style="height: 14vh">
@@ -160,6 +174,11 @@ You can always message me on GitHub.
                 <i>albums:</i>
             </h1>
 
+            <!-- caption -->
+            <p style="font-size: 1.9vh">
+                <i>i'm a huge music junkie, too!</i>
+            </p>
+
         </div>
 
         <div style="text-align: center; width: 100%">
@@ -167,34 +186,34 @@ You can always message me on GitHub.
             <!-- multitude -->
             <span>
                 <a href="https://open.spotify.com/album/5JY3b9cELQsoG7D5TJMOgw?si=zwLzSuRWSauRFwpQCTcE1w">
-                    <img style="height: 13vw; width: 13vw" class="shrink-hover" src="assets/albums/multitude.png">
+                    <img style="height: 15vw; width: 15vw" class="shrink-hover logo" src="assets/albums/multitude.png">
                 </a>
             </span>
 
             <!-- the life of pablo -->
             <span>
                 <a href="https://open.spotify.com/album/7gsWAHLeT0w7es6FofOXk1?si=HZmLUzHyT5KSmrV4SmkMTg">
-                    <img style="height: 13vw; width: 13vw" class="shrink-hover" src="assets/albums/thelifeofpablo.png">
+                    <img style="height: 15vw; width: 15vw" class="shrink-hover" src="assets/albums/thelifeofpablo.png">
                 </a>
             </span>
 
             <!-- the powers that b -->
             <span>
                 <a href="https://open.spotify.com/album/5Y04ylQjDWsawOUJXzY4YO?si=24cb4b984b8347f1">
-                    <img style="height: 13vw; width: 13vw" class="shrink-hover" src="assets/albums/thepowersthatbe.png">
+                    <img style="height: 15vw; width: 15vw" class="shrink-hover" src="assets/albums/thepowersthatbe.png">
                 </a>
             </span>
 
             <!-- personal playlist -->
             <span>
                 <a href="https://open.spotify.com/playlist/2ENTGdThttYwmw66AZHMo4?si=aaf6af2040fa4af5">
-                    <img style="height: 13vw; width: 13vw" class="shrink-hover" src="assets/albums/iansfaves.png">
+                    <img style="height: 15vw; width: 15vw" class="shrink-hover" src="assets/albums/iansfaves.png">
                 </a>
             </span>
 
             <!-- caption -->
             <p style="font-size: 1.9vh">
-                <i>check out these albums on spotify. the last one is my personal playlist!</i>
+                <i>check out these albums on spotify. <br>the last one is my personal playlist!</i>
             </p>
 
         </div>
@@ -206,12 +225,12 @@ You can always message me on GitHub.
             <div class="centered-box">
 
                 <!-- title -->
-                <h1 style="font-size: 8vw" class="main-title grow-hover">
-                    <i>bye!</i>
+                <h1 style="font-size: 7vw" class="main-title grow-hover">
+                    <i>cya!</i>
                 </h1>
                 
                 <!-- caption -->
-                <p style="color: #fff">
+                <p style="font-size: 2.2vh; color: #fff">
                     <i>thank you for checking<br>out my website!</i>
                 </p>
                     

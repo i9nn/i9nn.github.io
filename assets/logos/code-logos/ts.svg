@@ -1,7 +1,7 @@
 <!-- TypeScript -->
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-    class="iconify iconify--logos" width="6em" height="6em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"
+    class="iconify iconify--logos" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 256"
     data-icon="logos:typescript-icon">
 
     <path fill="#007ACC" d="M0 128v128h256V0H0z"></path>

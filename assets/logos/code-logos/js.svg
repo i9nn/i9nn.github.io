@@ -1,7 +1,7 @@
 <!-- JavaScript -->
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
-    class="iconify iconify--vscode-icons" width="6em" height="6em" preserveAspectRatio="xMidYMid meet"
+    class="iconify iconify--vscode-icons" width="100%" height="100%" preserveAspectRatio="xMidYMid meet"
     viewBox="0 0 32 32" data-icon="vscode-icons:file-type-js-official">
 
     <path fill="#F5DE19" d="M2 2h28v28H2z"></path>
