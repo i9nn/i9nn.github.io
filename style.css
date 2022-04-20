@@ -1,13 +1,15 @@
 /* 
-    Here's my theme colors:
-
-    #4b4e6d <-- Navy blue
-    #a0d2db <-- Lighter blue
-    #bee7e8 <-- Lighterer blue
-    #ffffff <-- White
-    #f4d35e <-- Yellow
-
+    Check out these theme colors! 
 */
+
+:root {
+    --navy: #4b4e6d;
+    --darknavy: #383b52;
+    --blue: #a0d2db;
+    --lightblue: #bee7e8;
+    --white: #ffffff;
+    --yellow: #f4d35e;
+}
 
 /* ―――――――――――――――――――――――――――――――――――――――――― */ 
 
@@ -20,7 +22,7 @@
 }
 
 a {
-    color: #f4d35e;
+    color: var(--yellow);
     text-decoration: none;
 }
 
@@ -35,19 +37,19 @@ div {
 
 /* effects */
 a:link, a:visited {
-    color: #f4d35e;
+    color: var(--yellow);
 }
   
 a:hover {
     color: transparent;
-    text-shadow: 0 0 20px #fff;
+    text-shadow: 0 0 20px var(--white);
 
-    -webkit-text-stroke: 0.5px #fff;
+    -webkit-text-stroke: 0.5px var(--white);
 }
 
 h1:hover {
     color: transparent;
-    -webkit-text-stroke: 3px #a0d2db;
+    -webkit-text-stroke: 3px var(--blue);
 }
 
 /* ―――――――――――――――――――――――――――――――――――――――――― */
@@ -56,7 +58,7 @@ h1:hover {
 
 /** sectional classes **/
 .first-section {
-    background: linear-gradient(180deg, #4b4e6d, #383b52);
+    background: linear-gradient(180deg, var(--navy), var(--darknavy));
     height: 80vh; 
     white-space: nowrap; 
 }
@@ -67,39 +69,39 @@ h1:hover {
 }
 
 .text-section {
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(190, 231, 232, 1) 30%, rgba(190, 231, 232, 1) 50%, rgba(190, 231, 232, 1) 70%, rgba(255, 255, 255, 1) 95%);
+    background: linear-gradient(90deg, var(--white) 5%, var(--lightblue) 30%, var(--lightblue) 70%, var(--white) 95%);
     height: 35vh; 
 }
 
 .spacer-bar {
-    background: linear-gradient(90deg, #fff 10%, #f4d35e 30%, #f4d35e 50%, #f4d35e 70%, #fff 90%);;
+    background: linear-gradient(90deg, var(--white) 10%, var(--yellow) 30%, var(--yellow) 70%, var(--white) 90%);;
     height: 1vh;
     width: 100%; 
 }
 
 .smaller-spacer-bar {
-    background: linear-gradient(90deg, #fff 30%, #f4d35e 50%, #f4d35e 50%, #f4d35e 50%, #fff 70%);;
+    background: linear-gradient(90deg, var(--white) 30%, var(--yellow) 50%, var(--white) 70%);
     height: 1vh;
     width: 100%; 
 }
 
 .closing-section {
-    background: linear-gradient(0deg, #4b4e6d, #383b52);
+    background: linear-gradient(0deg, var(--navy), var(--darknavy));
     height: 40vh; 
     white-space: nowrap;
 }
 
 /** text classes **/
 .main-title {
-    color: #a0d2db; 
+    color: var(--blue);  
     font-size: 20vw;
     text-shadow: 0 0 20px #bee7e868;
 }
 
 .lower-heading {
-    color: #4b4e6d;
+    color: var(--navy);
     font-size: 8vh;
-    text-shadow: 0 0 20px #4b4e6d;
+    text-shadow: 0 0 20px var(--navy);
 }
 
 /** image classes **/
@@ -143,7 +145,7 @@ h1:hover {
 }
 
 .lower-heading:hover {
-    text-shadow: 0 0 20px #a0d2db;
+    text-shadow: 0 0 20px var(--blue); 
 }
 
 /** animation hovers **/ 
