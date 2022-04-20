@@ -27,6 +27,10 @@ body, html {
     overflow-x: hidden;
 }
 
+div {
+    white-space: nowrap;
+}
+
 /* effects */
 a:link, a:visited {
     color: #f4d35e;
@@ -41,29 +45,51 @@ a:hover {
 
 h1:hover {
     color: transparent;
-    -webkit-text-stroke: 3px #BEE7E8;
+    -webkit-text-stroke: 3px #a0d2db;
 }
 
 /* classes */
 
-/* top section */
+/** sectional classes **/
 .first-section {
     background: linear-gradient(180deg, #4b4e6d, #383b52);
     height: 80vh; 
     white-space: nowrap; 
 }
 
+.transition-section {
+    background: #fff;
+    height: 20vh;
+}
+
+.text-section {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 5%, rgba(190, 231, 232, 1) 30%, rgba(190, 231, 232, 1) 50%, rgba(190, 231, 232, 1) 70%, rgba(255, 255, 255, 1) 95%);
+    height: 35vh; 
+}
+
+.spacer-bar {
+    background: linear-gradient(90deg, #fff 10%, #f4d35e 30%, #f4d35e 50%, #f4d35e 70%, #fff 90%);;
+    height: 1vh;
+    width: 100%; 
+}
+
+.closing-section {
+    background: linear-gradient(0deg, #4b4e6d, #383b52);
+    height: 40vh; 
+    white-space: nowrap;
+}
+
+/** text classes **/
 .main-title {
     color: #a0d2db; 
     font-size: 15vw;
     text-shadow: 0 0 20px #bee7e868;
 }
 
-
 .lower-heading {
-    color: #000;
+    color: #4b4e6d;
     font-size: 10vh;
-    text-shadow: 0 0 20px #aaa;
+    text-shadow: 0 0 20px #4b4e6d;
 }
 
 /* utility classes */
@@ -97,15 +123,23 @@ h1:hover {
 }
 
 .lower-heading:hover {
-    text-shadow: 0 0 20px #659a9f;
+    text-shadow: 0 0 20px #a0d2db;
 }
 
 .rot-back:hover {
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1) rotate(6deg);
+}
+
+.rot-back-slight:hover {
+    transform: scale(1.1) rotate(3deg);
 }
 
 .rot-front:hover {
-    transform: scale(1.1) rotate(-5deg);
+    transform: scale(1.1) rotate(-6deg);
+}
+
+.rot-front-slight:hover {
+    transform: scale(1.1) rotate(-3deg);
 }
 
 .shrink-hover:hover, .shrink-hover:focus, .shrink-hover:active {
