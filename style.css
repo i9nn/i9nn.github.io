@@ -9,6 +9,8 @@
 
 */
 
+/* ―――――――――――――――――――――――――――――――――――――――――― */ 
+
 /* markdown */
 * {
     font-family: 'Montserrat', sans-serif;
@@ -47,6 +49,8 @@ h1:hover {
     color: transparent;
     -webkit-text-stroke: 3px #a0d2db;
 }
+
+/* ―――――――――――――――――――――――――――――――――――――――――― */
 
 /* classes */
 
@@ -90,6 +94,12 @@ h1:hover {
     color: #4b4e6d;
     font-size: 10vh;
     text-shadow: 0 0 20px #4b4e6d;
+}
+
+/** image classes **/
+.cover {
+    height: 13vw; 
+    width: 13vw;
 }
 
 /* utility classes */
