@@ -13,10 +13,12 @@
 <!DOCTYPE html>
 <html>
     <head lang="en-US">
+        <!-- website cosmetics -->
         <title>& i9nn</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="assets/logos/editor-logos/icon.png">
 
+        <!-- preloaded Monserrat fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,600&display=swap" rel="stylesheet">
@@ -37,7 +39,7 @@
                 </h1>
 
                 <!-- post-title caption -->
-                <p style="font-size: 2vw; color: #fff">
+                <p style="font-size: 2.2vw; color: #fff">
                     <i>
                         full stack + game developer; fan of computers; jerk
                     </i>
@@ -50,49 +52,61 @@
             </div>
         </div>
         
-        <!-- small scroll arrow -->
-        <div style="height: 20vh; background: rgb(255, 255, 255)">
+        <!-- scroll arrow -->
+        <div class="transition-section">
             <div class="centered-block">
                 <br>
-                <h1 style="font-size: 10vh; color: transparent; -webkit-text-stroke: 2px #171717;">
+                <h1 style="font-family: Helvetica; font-size: 10vh; color: transparent; -webkit-text-stroke: 2px #171717;">
                     ↓
                 </h1>
             </div>
         </div>
 
-        <!-- description -->
-        <div style="height: 20vh">
-            <p style="font-size: 2.5vh">
-                welcome!!!
-            </p>
+        <!-- text bar -->
+        <div class="text-section">
+            <div class="centered-box">
 
-            <p style="font-size: 2.1vh">
-                my name is Ian, and I am a developer who is 
-                <br> excited to advance my development knowledge.
-                <br><br> i am always open to new ideas and working with others on
-                <br>code that can change the world.
-            </p>
+                <!-- caption title -->
+                <p style="font-size: 4vh; color: transparent; -webkit-text-stroke: 1px #4b4e6d;">
+                    welcome!!! 👋
+                </p>
+    
+                <!-- programming caption -->
+                <p style="font-size: 2.5vh">
+                    my name is <b>Ian</b>, and I am a high-school student
+                    <br>from both the east and west coast.
+                    
+                    <br><br>i've been developing ever since i 
+                    <br>got access to my dad's laptop and i started
+                    <br>messing with Lua. it eventually spiraled into
+                    <br>a <span style="color: #4b4e6d"><b><i>love of programming</i></b></span>. 🖥️💖
+                </p>
+            </div>
         </div>
+
+        <div class="spacer-bar"></div>
         
-        <!-- language containers & logos -->
+        <!-- language describer -->
         <div style="height: 18vh">
-            <h1 class="lower-heading grow-hover">
-                <i>languages:</i>
-            </h1>
-            <p style="font-size: 2vh"> 
-                <i>click on an icon to learn more!</i>
-            </p>
+            <div class="centered-box">
+                <h1 class="lower-heading grow-hover">
+                    <i>languages:</i>
+                </h1>
+                <p style="font-size: 2vh"> 
+                    <i>click on an icon to learn more!</i>
+                </p>
+            </div>
         </div>
         
         <div style="text-align: center">
             <a href="https://www.lua.org">
-                <img class="grow-hover rot-back" src="assets/logos/code-logos/lua.svg">
+                <img class="grow-hover rot-back-slight" src="assets/logos/code-logos/lua.svg">
             </a>
             <a href="https://www.java.com">
                 <img class="grow-hover rot-front" src="assets/logos/code-logos/java.svg">
             </a>
             <a href="https://en.wikipedia.org/wiki/HTML">
-                <img class="grow-hover rot-back" src="assets/logos/code-logos/html.svg">
+                <img class="grow-hover rot-back-slight" src="assets/logos/code-logos/html.svg">
             </a>
             <a href="https://www.javascript.com">
                 <img class="grow-hover rot-front" src="assets/logos/code-logos/js.svg">
@@ -102,10 +116,10 @@
                 <img class="grow-hover rot-back" src="assets/logos/code-logos/css.svg">
             </a>
             <a href="https://www.python.org">
-                <img class="grow-hover rot-front" src="assets/logos/code-logos/python.svg">
+                <img class="grow-hover rot-front-slight" src="assets/logos/code-logos/python.svg">
             </a>
             <a href="https://www.cplusplus.com/">
-                <img class="grow-hover rot-back" src="assets/logos/code-logos/cpp.svg">
+                <img class="grow-hover rot-back-slight" src="assets/logos/code-logos/cpp.svg">
             </a>
             <a href="https://www.typescriptlang.org/">
                 <img class="grow-hover rot-front" src="assets/logos/code-logos/ts.svg">
@@ -114,9 +128,9 @@
             <p style="font-size: 1.9vh">
                 <i>ranked in order of competency and knowledge from left to right.</i>
             </p>
-        </div> 
-        
-        
+            <br>
+        </div>
+
         <!-- editor containers + logos -->
         <div style="height: 14vh">
             <h1 class="lower-heading grow-hover">
@@ -126,13 +140,13 @@
         
         <div style="text-align: center">
             <a href="https://github.com">
-                <img class="grow-hover rot-back" src="assets/logos/editor-logos/github.svg">
+                <img class="grow-hover rot-back-slight" src="assets/logos/editor-logos/github.svg">
             </a>
             <a href="https://code.visualstudio.com/">
                 <img class="grow-hover rot-front" src="assets/logos/editor-logos/vscode.svg">
             </a>
             <a href="https://discord.com/">
-                <img class="grow-hover rot-back" src="assets/logos/editor-logos/discord.svg">
+                <img class="grow-hover rot-back-slight" src="assets/logos/editor-logos/discord.svg">
             </a>
             <a href="https://git-scm.com/">
                 <img class="grow-hover rot-front" src="assets/logos/editor-logos/git.svg">
@@ -183,16 +197,18 @@
         <!-- <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/2ENTGdThttYwmw66AZHMo4?utm-source=generator&theme=0" width="40vw" height="40vh" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>-->
          
         <br> <br>
-    
+        <div class="spacer-bar"></div>
         <!-- ending -->
-        <div style="height: 30vh; white-space: nowrap; background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(151, 194, 199, 0.6) 100%)">
-            <h1 style="font-size: 10vw" class="main-title grow-hover">
-                <i>bye!</i>
-            </h1>
-            
-            <p style="font-size: 2vh">
-                <i>thank you for checking out my website!</i>
-            </p>
+        <div class="closing-section">
+            <div class="centered-box">
+                <h1 style="font-size: 8vw" class="main-title grow-hover">
+                    <i>bye!</i>
+                </h1>
+                
+                <p style="color: #fff">
+                    <i>thank you for checking<br>out my website!</i>
+                </p>    
+            </div>  
         </div>
 
         <script src="effects.js"></script>
