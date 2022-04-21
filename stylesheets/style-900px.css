@@ -73,6 +73,14 @@ h1:hover {
     height: 35vh; 
 }
 
+.closing-section {
+    background: linear-gradient(0deg, var(--navy), var(--darknavy));
+    height: 40vh; 
+    white-space: nowrap;
+}
+
+/** spacer bars **/
+
 .spacer-bar {
     background: linear-gradient(90deg, var(--white) 10%, var(--yellow) 30%, var(--yellow) 70%, var(--white) 90%);;
     height: 1vh;
@@ -83,12 +91,6 @@ h1:hover {
     background: linear-gradient(90deg, var(--white) 30%, var(--yellow) 50%, var(--white) 70%);
     height: 1vh;
     width: 100%; 
-}
-
-.closing-section {
-    background: linear-gradient(0deg, var(--navy), var(--darknavy));
-    height: 40vh; 
-    white-space: nowrap;
 }
 
 /** text classes **/
@@ -137,6 +139,8 @@ h1:hover {
     transition-property: transform;
 }
 
+/* ―――――――――――――――――――――――――――――――――――――――――― */
+
 /* class effects */
 .grow-hover:hover, .grow-hover:focus, .grow-hover:active {
     -webkit-transform: scale(1.1);
@@ -148,21 +152,21 @@ h1:hover {
     text-shadow: 0 0 20px var(--blue); 
 }
 
-/** animation hovers **/ 
+/** rotational hovers **/ 
 .rot-back:hover {
-    transform: scale(1.1) rotate(6deg);
+    transform: scale(1.2) rotate(6deg);
 }
 
 .rot-back-slight:hover {
-    transform: scale(1.1) rotate(3deg);
+    transform: scale(1.2) rotate(3deg);
 }
 
 .rot-front:hover {
-    transform: scale(1.1) rotate(-6deg);
+    transform: scale(1.2) rotate(-6deg);
 }
 
 .rot-front-slight:hover {
-    transform: scale(1.1) rotate(-3deg);
+    transform: scale(1.2) rotate(-3deg);
 }
 
 .shrink-hover:hover, .shrink-hover:focus, .shrink-hover:active {
