@@ -21,7 +21,7 @@ You can always message me on GitHub.
         <!-- website cosmetics -->
         <title>& i9nn</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="stylesheets/style-900px.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="assets/logos/framework-logos/icon.png">
 
         <!-- preloaded Monserrat fonts -->
@@ -34,23 +34,22 @@ You can always message me on GitHub.
 
     </head>
 
-    <body>
-
+    <body class="scroll-stopper">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- main heading -->
-        <div class="first-section">
+        <div class="first-section animate__animated animate__slideInDown">
             <div class="centered-box">
 
                 <!-- main title -->
-                <h1 class="main-title animate__animated animate__flipInX">
+                <h1 class="main-title animate__animated animate__flipInX animate__delay-1s">
                     <i>
                         <p class="grow-hover">&amp; i9nn</p>
                     </i>
                 </h1>
 
                 <!-- post-title caption -->
-                <p style="font-size: 2.2vw; color: #fff">
+                <p class="main-title-caption animate__animated animate__zoomIn" style="color: #fff">
                     <i>
                         full stack + game developer; fan of computers; jerk
                     </i>
@@ -62,13 +61,14 @@ You can always message me on GitHub.
 
             </div>
         </div>
+
         
         <!-- transition block -->
         <div class="transition-section">
             <div class="centered-block">
 
                 <!-- arrow -->
-                <br><h1 class="animate__animated animate__fadeIn animate__delay-1s" style="font-family: Helvetica; font-size: 8vh; color: transparent; -webkit-text-stroke: 2px #171717;">
+                <br><h1 class="arrow animate__animated animate__fadeIn animate__delay-2s">
                     ↓
                 </h1>
 
@@ -100,12 +100,12 @@ You can always message me on GitHub.
                 </script>
 
                 <!-- caption title -->
-                <p class="waving-box animate__animated" style="font-size: 4.2vh; color: transparent; -webkit-text-stroke: 1px #4b4e6d;">
+                <p class="text-box-title waving-box animate__animated" style="color: transparent; -webkit-text-stroke: 1px #4b4e6d;">
                     welcome!!! 👋
                 </p>
     
                 <!-- programming caption -->
-                <p  style="font-size: 2.2vh">
+                <p class="description">
                     my name is <b>Ian</b>, and I am a high-school 
                     <br>student from both the east and west coast.
                     
@@ -130,14 +130,14 @@ You can always message me on GitHub.
                 </h1>
 
                 <!-- caption -->
-                <p style="font-size: 2vh"> 
+                <p class="caption"> 
                     <i>click on an icon to learn more!</i>
                 </p>
 
             </div>
         </div>
         
-        <div style="text-align: center">
+        <div class="icon-container">
 
             <!-- logo box -->
                 <!-- lua --> <a href="https://www.lua.org"><img class="grow-hover rot-back-slight logo" src="assets/logos/code-logos/lua.svg"></a>
@@ -151,7 +151,7 @@ You can always message me on GitHub.
                 <!-- typescript --> <a href="https://www.typescriptlang.org/"><img class="grow-hover rot-front logo" src="assets/logos/code-logos/ts.svg"></a>
 
             <!-- caption -->
-            <p style="font-size: 1.9vh">
+            <p class="caption">
                 <i>ranked in order of competency and knowledge.</i>
             </p><br>
 
@@ -166,13 +166,13 @@ You can always message me on GitHub.
             </h1>
 
             <!-- caption -->
-            <p style="font-size: 2vh"> 
+            <p class="caption"> 
                 <i>click on an icon to learn more!</i>
             </p>
 
         </div>
         
-        <div style="text-align: center">
+        <div class="icon-container">
 
             <!-- logo box -->
                 <!-- github --> <a href="https://github.com"><img class="grow-hover rot-back-slight logo" src="assets/logos/framework-logos/github.svg"></a>
@@ -183,7 +183,7 @@ You can always message me on GitHub.
                 <!-- bootstrap --> <a href="https://getbootstrap.com/"><img class="grow-hover rot-back-slight logo" src="assets/logos/framework-logos/bootstrap.svg"></a>
 
             <!-- caption -->
-            <p style="font-size: 1.9vh">
+            <p class="caption">
                 <i>ranked by how often I use them.</i>
             </p><br>
 
@@ -200,21 +200,21 @@ You can always message me on GitHub.
             </h1>
 
             <!-- caption -->
-            <p style="font-size: 1.9vh">
+            <p class="caption">
                 <i>i'm a huge music junkie, too!</i>
             </p>
 
         </div>
 
-        <div style="text-align: center; width: 100%">
+        <div class="icon-container">
 
-            <!-- multitude --> <span><a href="https://open.spotify.com/album/5JY3b9cELQsoG7D5TJMOgw?si=zwLzSuRWSauRFwpQCTcE1w"><img style="height: 15vw; width: 15vw" class="shrink-hover logo" src="assets/albums/multitude.png"></a></span>
-            <!-- the life of pablo --> <span><a href="https://open.spotify.com/album/7gsWAHLeT0w7es6FofOXk1?si=HZmLUzHyT5KSmrV4SmkMTg"><img style="height: 15vw; width: 15vw" class="shrink-hover" src="assets/albums/thelifeofpablo.png"></a></span>
-            <!-- the powers that b --> <span><a href="https://open.spotify.com/album/5Y04ylQjDWsawOUJXzY4YO?si=24cb4b984b8347f1"><img style="height: 15vw; width: 15vw" class="shrink-hover" src="assets/albums/thepowersthatbe.png"></a></span>
-            <!-- personal playlist --> <span><a href="https://open.spotify.com/playlist/2ENTGdThttYwmw66AZHMo4?si=aaf6af2040fa4af5"><img style="height: 15vw; width: 15vw" class="shrink-hover" src="assets/albums/iansfaves.png"></a></span>
+            <!-- multitude --> <span><a href="https://open.spotify.com/album/5JY3b9cELQsoG7D5TJMOgw?si=zwLzSuRWSauRFwpQCTcE1w"><img class="cover shrink-hover" src="assets/albums/multitude.png"></a></span>
+            <!-- the life of pablo --> <span><a href="https://open.spotify.com/album/7gsWAHLeT0w7es6FofOXk1?si=HZmLUzHyT5KSmrV4SmkMTg"><img class="cover shrink-hover" src="assets/albums/thelifeofpablo.png"></a></span>
+            <!-- the powers that b --> <span><a href="https://open.spotify.com/album/5Y04ylQjDWsawOUJXzY4YO?si=24cb4b984b8347f1"><img class="cover shrink-hover" src="assets/albums/thepowersthatbe.png"></a></span>
+            <!-- personal playlist --> <span><a href="https://open.spotify.com/playlist/2ENTGdThttYwmw66AZHMo4?si=aaf6af2040fa4af5"><img class="cover shrink-hover" src="assets/albums/iansfaves.png"></a></span>
 
             <!-- caption -->
-            <p style="font-size: 1.9vh">
+            <p class="caption">
                 <i>check out these albums on spotify. <br>the last one is my personal playlist!</i>
             </p>
 
@@ -227,12 +227,12 @@ You can always message me on GitHub.
             <div class="centered-box">
 
                 <!-- title -->
-                <h1 style="font-size: 7vw" class="main-title grow-hover">
+                <h1 class="last-title main-title grow-hover">
                     <i>cya!</i>
                 </h1>
                 
                 <!-- caption -->
-                <p style="font-size: 2.2vh; color: #fff">
+                <p class="caption" style="color: #fff">
                     <i>thank you for checking<br>out my website!</i>
                 </p>
                     
