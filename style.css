@@ -31,6 +31,10 @@ body, html {
     overflow-x: hidden;
 }
 
+body {
+    background: linear-gradient(180deg, var(--white) 70%, #bee7e868);
+}
+
 div {
     white-space: nowrap;
 }
@@ -96,13 +100,13 @@ h1:hover {
 
 /** spacer bars **/
 .spacer-bar, .smaller-spacer-bar {
-    background: linear-gradient(90deg, var(--white) 10%, var(--yellow) 30%, var(--yellow) 70%, var(--white) 90%);;
+    background: linear-gradient(90deg, transparent 10%, var(--yellow) 30%, var(--yellow) 70%, transparent 90%);
     height: 1vh;
     width: 100%; 
 }
 
 .smaller-spacer-bar {
-    background: linear-gradient(90deg, var(--white) 30%, var(--yellow) 50%, var(--white) 70%); 
+    background: linear-gradient(90deg, transparent 30%, var(--yellow) 50%, transparent 70%); 
 }
 
 /** text classes **/
@@ -169,7 +173,7 @@ h1:hover {
     .main-title-caption { font-size: 2.8vw }
     .arrow { font-size: 9vh }
 
-    .cover { height: 17vw; width: 17vw }
+    .cover { height: 19vw; width: 19vw }
     .logo { height: 15vh; width: 15vh }
 
     .lower-heading { font-size: 8vh }
@@ -187,7 +191,7 @@ h1:hover {
     .main-title-caption { font-size: 3.1vw }
     .arrow { font-size: 10vh }
 
-    .cover { height: 18vw; width: 18vw }
+    .cover { height: 19vw; width: 19vw }
     .logo { height: 13vh; width: 13vh }
 
     .lower-heading { font-size: 7vh }
