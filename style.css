@@ -63,6 +63,7 @@ h1:hover {
 /* --> static classes */
 .centered-box {
     position: relative;
+    text-align: center; 
     top: 50%;
     transform: translateY(-50%);
 
@@ -72,7 +73,7 @@ h1:hover {
 
 .first-section {
     background: linear-gradient(180deg, var(--navy), var(--darknavy));
-    height: 80vh; 
+    height: 100%; 
     white-space: nowrap; 
 }
 
