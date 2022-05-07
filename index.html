@@ -12,43 +12,71 @@ You can always message me on GitHub.
 
 <!DOCTYPE html>
 <html>
-    <head lang="en-US">
 
-        <!-- bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+<head lang="en-US">
 
-        <!-- website cosmetics -->
-        <title>& i9nn</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/x-icon" href="assets/logos/framework-logos/icon.png">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
-        <!-- preloaded Monserrat fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,600&display=swap">
+    <!-- website cosmetics -->
+    <title>i9nn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="new_style.css">
+    <link rel="icon" type="image/x-icon" href="assets/logos/framework-logos/icon.png">
 
-        <!-- animation sourcing -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- preloaded Monserrat fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,600&display=swap">
 
-    </head>
+    <!-- animation sourcing -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <body>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-        <!-- main heading -->
+<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <div class="topbox">
+        <div>
+            <p class="lcorner-icon">
+                <b>{ i } <span style="color: var(--lightblue)">────────────────</span></b>
+            </p>
+        </div>
+
+        <div class="centered">
+            <h1><b>
+                { i9nn }
+            </b></h1>
+
+            <h2><b>
+                full stack + game dev.
+            </b></h2>
+
+            <a href="https://github.com/i9nn">
+                check out my github!
+            </a>
+        </div>
+    </div>
+
+    <p>
+        poop
+    </p>
+
+    <!-- main heading -->
+    <!--
         <div class="first-section animate__animated animate__slideInDown">
             <div class="centered-box">
 
-                <!-- main title -->
+
                 <h1 class="main-title animate__animated animate__flipInX animate__delay-1s">
                     <i>
                         <p class="grow-hover">&amp; i9nn</p>
                     </i>
                 </h1>
 
-                <!-- post-title caption -->
                 <p class="main-title-caption animate__animated animate__zoomIn" style="color: #fff">
                     <i>
                         full stack + game developer; fan of computers; jerk
@@ -61,185 +89,7 @@ You can always message me on GitHub.
 
             </div>
         </div>
+        -->
+</body>
 
-        
-        <!-- transition block -->
-        <div class="transition-section">
-            <div class="centered-block">
-
-                <!-- arrow -->
-                <br><h1 class="arrow animate__animated animate__fadeIn animate__delay-2s">
-                    ↓
-                </h1>
-
-            </div>
-        </div>
-
-        <div class="spacer-bar"></div>
-
-        <!-- text bar -->
-        <div class="text-section">
-            <div class="text-section-wrapper centered-box">
-
-                <!-- waving box animation -->
-                <script>
-                    const observer = new IntersectionObserver(entries => {
-                        entries.forEach(entry => {
-                            const waving = entry.target.querySelector('.waving-box')
-                            
-                            if (entry.isIntersecting) {
-                                waving.classList.add("animate__rubberBand");
-                                return; 
-                            }
-
-                            waving.classList.remove('animate__rubberBand');
-                        });
-                    });
-
-                    observer.observe(document.querySelector('.text-section-wrapper'));
-                </script>
-
-                <!-- caption title -->
-                <p class="text-box-title waving-box animate__animated" style="color: transparent; -webkit-text-stroke: 1px #4b4e6d;">
-                    welcome!!! 👋
-                </p>
-    
-                <!-- programming caption -->
-                <p class="description">
-                    my name is <b>Ian</b>, and I am a high-school 
-                    <br>student from both the east and west coast.
-                    
-                    <br><br>i've been developing ever since i 
-                    <br>got access to my dad's desktop and i started
-                    <br>messing with Lua. it eventually spiraled into
-                    <br>a <span style="color: #4b4e6d"><b><i>love of programming</i></b></span>. 🖥️💖
-                </p>
-                
-            </div>
-        </div>
-
-        <div class="smaller-spacer-bar"></div>
-        
-        <!-- language describer -->
-        <div style="height: 18vh">
-            <div class="centered-box">
-
-                <!-- title -->
-                <h1 class="lower-heading grow-hover">
-                    <i>languages:</i>
-                </h1>
-
-                <!-- caption -->
-                <p class="caption"> 
-                    <i>click on an icon to learn more!</i>
-                </p>
-
-            </div>
-        </div>
-        
-        <div class="icon-container">
-
-            <!-- logo box -->
-                <!-- lua --> <a href="https://www.lua.org"><img class="grow-hover rot-back-slight logo" src="assets/logos/code-logos/lua.svg"></a>
-                <!-- java --> <a href="https://www.java.com"><img class="grow-hover rot-front logo" src="assets/logos/code-logos/java.svg"></a>
-                <!-- python --> <a href="https://www.python.org"><img class="grow-hover rot-front-slight logo" src="assets/logos/code-logos/python.svg"></a>
-                <!-- javascript --> <a href="https://www.javascript.com"><img class="grow-hover rot-front logo" src="assets/logos/code-logos/js.svg"></a>
-                    <br>
-                <!-- html --> <a href="https://en.wikipedia.org/wiki/HTML"><img class="grow-hover rot-back-slight logo" src="assets/logos/code-logos/html.svg"></a>
-                <!-- css --> <a href="https://en.wikipedia.org/wiki/CSS"><img class="grow-hover rot-back logo" src="assets/logos/code-logos/css.svg"></a>
-                <!-- c++ --> <a href="https://www.cplusplus.com/"><img class="grow-hover rot-back-slight logo" src="assets/logos/code-logos/cpp.svg"></a>
-                <!-- typescript --> <a href="https://www.typescriptlang.org/"><img class="grow-hover rot-front logo" src="assets/logos/code-logos/ts.svg"></a>
-
-            <!-- caption -->
-            <p class="caption">
-                <i>ranked in order of competency and knowledge.</i>
-            </p><br>
-
-        </div>
-
-        <!-- frameworks describer -->
-        <div style="height: 14vh">
-
-            <!-- title -->
-            <h1 class="lower-heading grow-hover">
-                <i>frameworks:</i>
-            </h1>
-
-            <!-- caption -->
-            <p class="caption"> 
-                <i>click on an icon to learn more!</i>
-            </p>
-
-        </div>
-        
-        <div class="icon-container">
-
-            <!-- logo box -->
-                <!-- github --> <a href="https://github.com"><img class="grow-hover rot-back-slight logo" src="assets/logos/framework-logos/github.svg"></a>
-                <!-- vscode --> <a href="https://code.visualstudio.com/"><img class="grow-hover rot-front logo" src="assets/logos/framework-logos/vscode.svg"></a>
-                <!-- discord --> <a href="https://discord.com/"><img class="grow-hover rot-back-slight logo" src="assets/logos/framework-logos/discord.svg"></a>
-                    <br>
-                <!-- git --> <a href="https://git-scm.com/"><img class="grow-hover rot-front logo" src="assets/logos/framework-logos/git.svg"></a>
-                <!-- bootstrap --> <a href="https://getbootstrap.com/"><img class="grow-hover rot-back-slight logo" src="assets/logos/framework-logos/bootstrap.svg"></a>
-
-            <!-- caption -->
-            <p class="caption">
-                <i>ranked by how often I use them.</i>
-            </p><br>
-
-        </div>
-
-        <div class="smaller-spacer-bar"></div>
-
-        <!-- albums describer -->
-        <div style="height: 14vh">
-
-            <!-- title -->
-            <h1 class="lower-heading grow-hover">
-                <i>albums:</i>
-            </h1>
-
-            <!-- caption -->
-            <p class="caption">
-                <i>i'm a huge music junkie, too!</i>
-            </p>
-
-        </div>
-
-        <div class="icon-container">
-
-            <!-- multitude --> <span><a href="https://open.spotify.com/album/5JY3b9cELQsoG7D5TJMOgw?si=zwLzSuRWSauRFwpQCTcE1w"><img class="cover shrink-hover" src="assets/albums/multitude.png"></a></span>
-            <!-- the life of pablo --> <span><a href="https://open.spotify.com/album/7gsWAHLeT0w7es6FofOXk1?si=HZmLUzHyT5KSmrV4SmkMTg"><img class="cover shrink-hover" src="assets/albums/thelifeofpablo.png"></a></span>
-            <!-- the powers that b --> <span><a href="https://open.spotify.com/album/5Y04ylQjDWsawOUJXzY4YO?si=24cb4b984b8347f1"><img class="cover shrink-hover" src="assets/albums/thepowersthatbe.png"></a></span>
-            <!-- personal playlist --> <span><a href="https://open.spotify.com/playlist/2ENTGdThttYwmw66AZHMo4?si=aaf6af2040fa4af5"><img class="cover shrink-hover" src="assets/albums/iansfaves.png"></a></span>
-
-            <!-- caption -->
-            <p class="caption">
-                <i>check out these albums on spotify. <br>the last one is my personal playlist!</i>
-            </p>
-
-        </div>
-         
-        <br><br><div class="spacer-bar"></div>
-
-        <!-- ending -->
-        <div class="closing-section">
-            <div class="centered-box">
-
-                <!-- title -->
-                <h1 class="last-title main-title grow-hover">
-                    <i>cya!</i>
-                </h1>
-                
-                <!-- caption -->
-                <p class="caption" style="color: #fff">
-                    <i>thank you for checking<br>out my website!</i>
-                </p>
-                    
-            </div>  
-        </div>
-
-        <script src="effects.js"></script>
-
-    </body>
 </html>

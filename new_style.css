@@ -1,0 +1,92 @@
+:root {
+    --navy: #4b4e6d;
+    --darknavy: #383b52;
+    --blue: #a0d2db;
+    --lightblue: #bee7e8;
+    --white: #ffffff;
+    --yellow: #f4d35e;
+}
+
+/* markdown */
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+}
+
+a {
+    text-decoration: none;
+}
+
+body, html {
+    max-width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+/* gen */
+.centered {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+}
+
+/* topbox */ 
+/* --> md */
+.topbox {
+    background: linear-gradient(180deg, var(--navy), var(--darknavy));
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.topbox h1 {
+    font-size: 12vw; 
+    color: var(--blue);
+    text-shadow: 0 0 1.4em var(--lightblue); 
+}
+
+.topbox h2 {
+    font-size: 2.8vw; 
+    color: var(--yellow);
+    text-shadow: 0 0 1.2em var(--yellow); 
+}
+
+.topbox a {
+    font-size: 2vw; 
+    color: var(--white); 
+}
+
+.topbox img {
+    width: 20vw;
+    height: 20vw; 
+}
+
+/* --> classes */
+.topbox .lcorner-icon {
+    color: var(--blue); 
+    position: absolute; 
+    text-align: left; 
+    font-size: 2vw;
+    top: 5px; 
+    left: 5px; 
+}
+
+/* --> effects */
+.topbox h1, .topbox a {
+    transition-duration: 0.3s;
+}
+
+.topbox h1:hover {
+    color: var(--white); 
+    text-shadow: 0 0 1.8em var(--white); 
+    transform: rotate(1deg) scale(1.02);
+}
+
+.topbox a:hover {
+    color: #ffffff7d;
+    text-shadow: 0 0 0.3em #ffffff7d;
+}
