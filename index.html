@@ -22,7 +22,7 @@ You can always message me on GitHub.
         <!-- website cosmetics -->
         <title>i9nn</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="new_style.css">
+        <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="assets/logos/framework-logos/icon.png">
 
         <!-- preloaded Monserrat fonts -->
@@ -39,27 +39,56 @@ You can always message me on GitHub.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <div class="topbox">
-            <div>
-                <p class="lcorner-icon">
-                    <b>{ i } <span style="color: var(--lightblue)">────────────────</span></b> 
-                    <a href="https://discordapp.com/users/614954208139149319/">
-                        <img src="assets/logos/framework-logos/discord.svg">
+            <div class="bg">
+                <div>
+                    <p class="tcorner-icon">
+                        <b>{ i } <span style="color: var(--yellow)"><i>v3</i></span> <span style="color: var(--lightblue)">────────────────</span></b> 
+                        <a href="https://discordapp.com/users/614954208139149319/">
+                            <img src="assets/logos/framework-logos/discord.svg">
+                        </a>
+                    </p>
+
+                    <p class="bcorner-icon">
+                        <b>made with <span style="color: #f4d35e3b;">❤</span> :]</b>
+                    </p>
+                </div>
+
+                <div class="centered">
+                    <h1><b>{ i9nn }</b></h1>
+                    <h2><b>full stack + game dev.</b></h2>
+
+                    <a href="https://github.com/i9nn">
+                        check out my github!
                     </a>
-                </p>
+                </div>
             </div>
+        </div>
 
-            <div class="centered">
-                <h1><b>
-                    { i9nn }
-                </b></h1>
+        <div class="textdesc">
+            <div class="bg">
+                <div class="centered smile-upper">
+                    <script>
+                        const observer = new IntersectionObserver(entries => {
+                            entries.forEach(entry => {
+                                const waving = entry.target.querySelector(".smile")
+                                
+                                if (entry.isIntersecting) {
+                                    waving.classList.add("animate__bounce");
+                                    return; 
+                                }
+    
+                                waving.classList.remove("animate__bounce");
+                            });
+                        });
+    
+                        observer.observe(document.querySelector('.smile-upper'));
+                    </script>
 
-                <h2><b>
-                    full stack + game dev.
-                </b></h2>
-
-                <a href="https://github.com/i9nn">
-                    check out my github!
-                </a>
+                    <h1> <div class="animate__animated smile"><i class="bi bi-emoji-smile"></i></div> <i>welcome!</i></h1>
+                    <h2>my name is Ian. i am a web <br>& game developer located in NV.</h2>
+                        <br>
+                    <h3>i have been developing for around <i>five years</i> <br> in around <i>six different languages.</i></h3>
+                </div>
             </div>
         </div>
     </body>
