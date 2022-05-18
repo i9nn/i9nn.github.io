@@ -33,15 +33,10 @@ body, html {
 .centered {
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
 
+    transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-}
-
-.emoji {
-    color: var(--blue); 
-    text-shadow: 0 3px 0.1em var(--navy);
 }
 
 /* topbox */ 
@@ -156,6 +151,11 @@ body, html {
     background-image: url(assets/textdesc-background.svg); 
     height: 100%; 
     width: 100%;
+}
+
+.textdesc .emoji {
+    color: var(--blue); 
+    text-shadow: 0 3px 0.1em var(--navy);
 }
 
 @media only screen and (max-width: 600px) {
