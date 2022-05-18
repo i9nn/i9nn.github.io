@@ -184,3 +184,29 @@ body, html {
     .textdesc h3 { font-size: 3.4vw }
 }
 
+@media only screen and (max-width: 1000px) {
+    .topbox h1 { font-size: 14vw }
+    .topbox h2 { font-size: 4.1vw }
+    .topbox a { font-size: 3.5vw }
+    .topbox .tcorner-icon { font-size: 2.9vw }
+    .topbox .tcorner-icon img { height: 2.9vw; width: 2.9vw }
+    .topbox .bcorner-icon { font-size: 2.4vw }
+
+    .textdesc h1 { font-size: 6vw }
+    .textdesc h2 { font-size: 3.3vw }
+    .textdesc h3 { font-size: 2.8vw }
+}
+
+@media only screen and (max-width: 1400px) {
+    .topbox h1 { font-size: 12.3vw }
+    .topbox h2 { font-size: 3.9vw }
+    .topbox a { font-size: 2.5vw }
+    .topbox .tcorner-icon { font-size: 2.5vw }
+    .topbox .tcorner-icon img { height: 2.5vw; width: 2.5vw }
+    .topbox .bcorner-icon { font-size: 2vw }
+
+    .textdesc h1 { font-size: 5vw }
+    .textdesc h2 { font-size: 2.3vw }
+    .textdesc h3 { font-size: 1.8vw }
+}
+
