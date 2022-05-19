@@ -165,6 +165,8 @@ body, html {
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
+
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
 }
 
 /* --> classes */
@@ -182,6 +184,7 @@ body, html {
 /* --> effects */
 .textdesc img:hover { 
     transform: scale(1.1);
+    filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.5));
 }
 
 @media only screen and (max-width: 1300px) {
