@@ -6,13 +6,13 @@
 
     <defs>
         <linearGradient id="IconifyId-17f653f1ca7-2b9e72-0" x1="12.959%" x2="79.639%" y1="12.039%" y2="78.201%">
-            <stop offset="0%" stop-color="#387EB8"></stop>
-            <stop offset="100%" stop-color="#366994"></stop>
+            <stop offset="0%" stop-color="#62626243"></stop>
+            <stop offset="100%" stop-color="#62626243"></stop>
         </linearGradient>
         
         <linearGradient id="IconifyId-17f653f1ca7-2b9e72-1" x1="19.128%" x2="90.742%" y1="20.579%" y2="88.429%">
-            <stop offset="0%" stop-color="#FFE052"></stop>
-            <stop offset="100%" stop-color="#FFC331"></stop>
+            <stop offset="0%" stop-color="#62626243"></stop>
+            <stop offset="100%" stop-color="#62626243"></stop>
         </linearGradient>
     </defs>
 

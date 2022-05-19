@@ -1,17 +1,14 @@
-/* 
-    Check out these theme colors! 
-*/
-
+/* variables */ 
 :root {
     --navy: #4b4e6d;
     --darknavy: #383b52;
     --blue: #a0d2db;
     --lightblue: #bee7e8;
     --white: #ffffff;
+    --tns-white: #ffffff7d; 
+    --tns-grey: #62626243;
     --yellow: #f4d35e;
 }
-
-/* ―――――――――――――――――――――――――――――――――――――――――― */ 
 
 /* markdown */
 * {
@@ -22,7 +19,6 @@
 }
 
 a {
-    color: var(--yellow);
     text-decoration: none;
 }
 
@@ -31,222 +27,223 @@ body, html {
     overflow-x: hidden;
 }
 
-body {
-    background: linear-gradient(180deg, var(--white) 70%, #bee7e868);
+::-webkit-scrollbar {
+    width: 0px;   
+    height: 0px;
 }
 
-div {
-    white-space: nowrap;
-}
-
-/* markdown effects */
-a:link, a:visited {
-    color: var(--yellow);
-}
-  
-a:hover {
-    color: transparent;
-    text-shadow: 0 0 20px var(--white);
-
-    -webkit-text-stroke: 0.5px var(--white);
-}
-
-h1:hover {
-    color: transparent;
-    -webkit-text-stroke: 3px var(--blue);
-}
-
-/* ―――――――――――――――――――――――――――――――――――――――――― */
-
-/* classes */
-
-/* --> static classes */
-.centered-box {
+/* gen */
+.centered {
     position: relative;
     text-align: center; 
     top: 50%;
-    transform: translateY(-50%);
 
+    transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
 }
 
-.first-section {
+/* topbox */ 
+/* --> md */
+.topbox {
     background: linear-gradient(180deg, var(--navy), var(--darknavy));
-    height: 100%; 
-    white-space: nowrap; 
+    height: 100vh; 
+    overflow: hidden; 
 }
 
-.transition-section {
-    background: #fff;
-    height: 20vh;
+.topbox h1 {
+    font-size: 14vw; 
+    color: var(--blue);
+    text-shadow: 0 0 1.4em var(--lightblue); 
 }
 
-.text-section {
-    background: linear-gradient(90deg, var(--white) 5%, var(--lightblue) 30%, var(--lightblue) 70%, var(--white) 95%);
-    height: 35vh; 
+.topbox h2 {
+    font-size: 2.8vw; 
+    color: var(--yellow);
+    text-shadow: 0 0 1.2em var(--yellow); 
 }
 
-.icon-container {
-    text-align: center
+.topbox a {
+    font-size: 2vw; 
+    color: var(--white); 
 }
 
-.closing-section {
-    background: linear-gradient(0deg, var(--navy), var(--darknavy));
-    height: 40vh; 
-    white-space: nowrap;
-}
-
-/* --> dynamic classes */ 
-
-/** spacer bars **/
-.spacer-bar, .smaller-spacer-bar {
-    background: linear-gradient(90deg, transparent 10%, var(--yellow) 30%, var(--yellow) 70%, transparent 90%);
-    height: 1vh;
+/* --> classes */
+.topbox .bg {
+    background-size: cover; 
+    background-image: url(assets/backgrounds/topbox-text.svg); 
     width: 100%; 
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-.smaller-spacer-bar {
-    background: linear-gradient(90deg, transparent 30%, var(--yellow) 50%, transparent 70%); 
+.topbox .tcorner-icon {
+    color: var(--blue); 
+    position: absolute; 
+    text-align: left; 
+    font-size: 2vw;
+    top: 1vw; 
+    left: 1vw; 
 }
 
-/** text classes **/
-
-/** --> top box **/
-.main-title {
-    color: var(--blue);  
-    font-size: 20vw;
-    text-shadow: 0 0 20px #bee7e868;
+.topbox .tcorner-icon img {
+    height: 2vw; 
+    width: 2vw; 
 }
 
-.main-title-caption {
-    font-size: 2.5vw; 
+.topbox .bcorner-icon {
+    color: #ffffff3b;
+    position: absolute;
+    text-align: right; 
+    font-size: 1.2vw; 
+    bottom: 1vw; 
+    right: 1vw; 
 }
 
-.arrow {
-    color: transparent;
-    font-family: Helvetica; 
-    font-size: 8vh;  
-    -webkit-text-stroke: 2px #171717;
+.topbox .arrow {
+    width: 100%;
+    height: 20vh;
+    top: 80vh; 
+    position: absolute;
+    font-size: 10vh; 
+    color: var(--tns-white); 
 }
 
-/** --> logo boxes **/
-.cover {
-    height: 13vw; 
-    width: 13vw;
-}
-
-.logo {
-    height: 12vh;
-    width: 12vh; 
-}
-
-/** --> text **/
-.lower-heading {
-    color: var(--navy);
-    font-size: 8vh;
-    text-shadow: 0 0 20px var(--navy);
-}
-
-.text-box-title {
-    font-size: 4.2vh; 
-}
-
-.description {
-    font-size: 2.2vh; 
-}
-
-.caption {
-    font-size: 2.2vh; 
-}
-
-/** --> closing box **/
-.last-title {
-    color: var(--blue);  
-    font-size: 14vw;
-    text-shadow: 0 0 20px #bee7e868;
-}
-
-@media only screen and (max-width: 900px) {
-    .spacer-bar, .smaller-spacer-bar { height: 0.9vh } 
-
-    .main-title { font-size: 20vw }
-    .main-title-caption { font-size: 2.8vw }
-    .arrow { font-size: 9vh }
-
-    .cover { height: 19vw; width: 19vw }
-    .logo { height: 15vh; width: 15vh }
-
-    .lower-heading { font-size: 8vh }
-    .text-box-title { font-size: 4.8vh }
-
-    .description { font-size: 2.3vh }
-    .caption { font-size: 2.2vh }
-    .last-title { font-size: 14vw }
-}
-
-@media only screen and (max-width: 600px) {
-    .spacer-bar, .smaller-spacer-bar { height: 0.7vh } 
-
-    .main-title { font-size: 24vw }
-    .main-title-caption { font-size: 3.1vw }
-    .arrow { font-size: 10vh }
-
-    .cover { height: 19vw; width: 19vw }
-    .logo { height: 13vh; width: 13vh }
-
-    .lower-heading { font-size: 7vh }
-    .text-box-title { font-size: 4.6vh }
-
-    .description { font-size: 2.3vh }
-    .caption { font-size: 2vh }
-    .last-title { font-size: 16vw }
-}
-
-/* ―――――――――――――――――――――――――――――――――――――――――― */
-
-/* class effects */
-.grow-hover:hover, .grow-hover:focus, .grow-hover:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    z-index: 1000; 
-}
-
-.lower-heading:hover {
-    text-shadow: 0 0 20px var(--blue); 
-}
-
-.grow-hover, .shrink-hover {
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-
-    -webkit-transition-duration: 0.3s;
+/* --> effects */
+.topbox h1, .topbox a, .topbox .tcorner-icon img {
     transition-duration: 0.3s;
-
     -webkit-transition-property: transform;
     transition-property: transform;
 }
 
-/** rotational hovers **/ 
-.rot-back:hover {
-    transform: scale(1.2) rotate(6deg);
+.topbox h1:hover {
+    color: var(--white); 
+    text-shadow: 0 0 1.8em var(--white); 
+    transform: rotate(1deg) scale(1.02);
 }
 
-.rot-back-slight:hover {
-    transform: scale(1.2) rotate(3deg);
+.topbox .tcorner-icon img:hover {
+    transform: scale(1.3); 
 }
 
-.rot-front:hover {
-    transform: scale(1.2) rotate(-6deg);
+.topbox a:hover {
+    color: var(--tns-white);
+    text-shadow: 0 0 0.3em var(--tns-white);
 }
 
-.rot-front-slight:hover {
-    transform: scale(1.2) rotate(-3deg);
+/* textdesc */
+.textdesc {
+    height: 70vh; 
+    background: linear-gradient(180deg, var(--darknavy) -40%, var(--white));
 }
 
-.shrink-hover:hover, .shrink-hover:focus, .shrink-hover:active {
-    -webkit-transform: scale(0.95);
-    transform: scale(0.95);
-    z-index: 1000; 
+.textdesc h1 {
+    font-size: 4.1vw; 
+    color: var(--darknavy); 
 }
+
+.textdesc h2 {
+    font-size: 2vw; 
+    color: var(--navy); 
+}
+
+.textdesc h3 {
+    font-size: 1.7vw;
+    color: var(--navyblue); 
+}
+
+.textdesc h4 {
+    font-size: 1.4vw; 
+}
+
+.textdesc img {
+    width: 6vw; 
+    height: 6vw; 
+
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.3));
+}
+
+/* --> classes */
+.textdesc .bg {
+    background-image: url(assets/backgrounds/textdesc-background.svg); 
+    height: 100%; 
+    width: 100%;
+}
+
+.textdesc .emoji {
+    color: var(--blue); 
+    text-shadow: 0 3px 0.1em var(--navy);
+}
+
+/* --> effects */
+.textdesc img:hover { 
+    transform: scale(1.1);
+    filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.5));
+}
+
+@media only screen and (max-width: 1300px) {
+    .topbox h1 { font-size: 12.3vw }
+    .topbox h2 { font-size: 3.9vw }
+    .topbox a { font-size: 2.5vw }
+    .topbox .tcorner-icon { font-size: 2.5vw }
+    .topbox .tcorner-icon img { height: 2.5vw; width: 2.5vw }
+    .topbox .bcorner-icon { font-size: 2vw }
+
+    .textdesc h1 { font-size: 4.7vw }
+    .textdesc h2 { font-size: 2.3vw }
+    .textdesc h3 { font-size: 2vw }
+    .textdesc img { width: 8vw; height: 8vw; }
+}
+
+@media only screen and (max-width: 1000px) {
+    .topbox h1 { font-size: 14vw }
+    .topbox h2 { font-size: 4.1vw }
+    .topbox a { font-size: 3.5vw }
+    .topbox .tcorner-icon { font-size: 2.9vw }
+    .topbox .tcorner-icon img { height: 2.9vw; width: 2.9vw }
+    .topbox .bcorner-icon { font-size: 2.4vw }
+
+    .textdesc h1 { font-size: 6vw }
+    .textdesc h2 { font-size: 3.3vw }
+    .textdesc h3 { font-size: 2.8vw }
+    .textdesc img { width: 10vw; height: 10vw; }
+}
+
+@media only screen and (max-width: 800px) {
+    .topbox h1 { font-size: 16vw }
+    .topbox h2 { font-size: 4.5vw }
+    .topbox a { font-size: 4.2vw }
+    .topbox .tcorner-icon { font-size: 3.2vw }
+    .topbox .tcorner-icon img { height: 3.2vw; width: 3.2vw }
+    .topbox .bcorner-icon { font-size: 2.7vw }
+
+    .textdesc h1 { font-size: 7vw }
+    .textdesc h2 { font-size: 3.8vw }
+    .textdesc h3 { font-size: 3.4vw }
+    .textdesc img { width: 11vw; height: 11vw; }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .topbox h1 { font-size: 20vw }
+    .topbox h2 { font-size: 6vw }
+    .topbox a { font-size: 5.4vw }
+    .topbox .tcorner-icon { font-size: 4vw }
+    .topbox .tcorner-icon img { height: 4vw; width: 4vw }
+    .topbox .bcorner-icon { font-size: 3.5vw }
+
+    .textdesc h1 { font-size: 8vw }
+    .textdesc h2 { font-size: 4.3vw }
+    .textdesc h3 { font-size: 3.8vw }
+    .textdesc img { width: 12vw; height: 12vw; }
+}
+
+
+

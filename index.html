@@ -14,8 +14,13 @@ You can always message me on GitHub.
 <html>
     <head lang="en-US">
 
+        <!-- bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
         <!-- website cosmetics -->
-        <title>& i9nn</title>
+        <title>i9nn</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="new_style.css">
         <link rel="icon" type="image/x-icon" href="assets/logos/framework-logos/icon.png">
@@ -26,29 +31,79 @@ You can always message me on GitHub.
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,600&display=swap">
 
         <!-- animation sourcing -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     </head>
 
     <body>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!-- top section -->
         <div class="topbox">
-            <div class="centered">
-                <h1 class="title animate__animated">
-                    <b>{ i9nn }</b>
-                </h1>
-                <h2>
-                    full-stack + game dev. 
-                </h2>
-                <a href="https://github.com/i9nn">
-                    check out my github!
-                </a>
+            <div class="bg">
+                <div>
+                    <p class="tcorner-icon">
+                        <b>{ i } <span style="color: var(--yellow)"><i>v3</i></span> <span style="color: var(--lightblue)">────────────────</span></b> 
+                        <a href="https://discordapp.com/users/614954208139149319/">
+                            <img src="assets/logos/discord.svg">
+                        </a>
+                    </p>
+
+                    <p class="bcorner-icon">
+                        <b>made with <span style="color: #f4d35e3b;">❤</span> :]</b>
+                    </p>
+
+                    <p class="arrow animate__animated animate__fadeInDown animate__delay-1s">
+                        ↓
+                    </p>
+                </div>
+
+                <div class="centered">
+                    <h1><b>{ i9nn }</b></h1>
+                    <h2><b>full stack + game dev.</b></h2>
+
+                    <a href="https://github.com/i9nn">
+                        check out my github!
+                    </a>
+                </div>
             </div>
         </div>
-        
 
-        <p> poop 
+        <div class="textdesc">
+            <div class="bg">
+                <div class="centered smile-upper">
+                    <script>
+                        const observer = new IntersectionObserver(entries => {
+                            entries.forEach(entry => {
+                                const waving = entry.target.querySelector(".smile")
+                                
+                                if (entry.isIntersecting) {
+                                    waving.classList.add("animate__bounce");
+                                    return; 
+                                }
+    
+                                waving.classList.remove("animate__bounce");
+                            });
+                        });
+    
+                        observer.observe(document.querySelector('.smile-upper'));
+                    </script>
+
+                    <h1> <div class="animate__animated smile"><i class="bi bi-emoji-smile emoji"></i></div> <i>welcome!</i></h1>
+                    <h2>my name is Ian. i am a web <br>& game developer located in NV.</h2>
+                        <br>
+                    <h3>i have been developing for around <i>five years</i> <br> in around <i>seven different languages.</i></h3>
+
+                    <div>
+                        <a href="https://www.lua.org/"><img src="assets/logos/lua.svg"></a>
+                        <a href="https://www.java.com/"><img src="assets/logos/java.svg"></a>
+                        <a href="https://en.wikipedia.org/wiki/HTML"><img src="assets/logos/html.svg"></a>
+                        <a href="https://en.wikipedia.org/wiki/CSS"><img src="assets/logos/css.svg"></a>
+                        <a href="https://www.kotlinlang.org"><img src="assets/logos/kotlin.svg"></a>
+                        <a href="https://www.python.org/"><img src="assets/logos/python.svg"></a>
+                        <a href="https://www.javascript.com/"><img src="assets/logos/js.svg"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
