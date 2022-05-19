@@ -184,7 +184,7 @@ body, html {
     transform: scale(1.1);
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1300px) {
     .topbox h1 { font-size: 12.3vw }
     .topbox h2 { font-size: 3.9vw }
     .topbox a { font-size: 2.5vw }
@@ -192,9 +192,10 @@ body, html {
     .topbox .tcorner-icon img { height: 2.5vw; width: 2.5vw }
     .topbox .bcorner-icon { font-size: 2vw }
 
-    .textdesc h1 { font-size: 5vw }
+    .textdesc h1 { font-size: 4.7vw }
     .textdesc h2 { font-size: 2.3vw }
-    .textdesc h3 { font-size: 1.8vw }
+    .textdesc h3 { font-size: 2vw }
+    .textdesc img { width: 8vw; height: 8vw; }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -208,6 +209,7 @@ body, html {
     .textdesc h1 { font-size: 6vw }
     .textdesc h2 { font-size: 3.3vw }
     .textdesc h3 { font-size: 2.8vw }
+    .textdesc img { width: 10vw; height: 10vw; }
 }
 
 @media only screen and (max-width: 800px) {
@@ -221,6 +223,7 @@ body, html {
     .textdesc h1 { font-size: 7vw }
     .textdesc h2 { font-size: 3.8vw }
     .textdesc h3 { font-size: 3.4vw }
+    .textdesc img { width: 11vw; height: 11vw; }
 }
 
 
@@ -235,6 +238,7 @@ body, html {
     .textdesc h1 { font-size: 8vw }
     .textdesc h2 { font-size: 4.3vw }
     .textdesc h3 { font-size: 3.8vw }
+    .textdesc img { width: 12vw; height: 12vw; }
 }
 
 
