@@ -1,9 +1,12 @@
+/* variables */ 
 :root {
     --navy: #4b4e6d;
     --darknavy: #383b52;
     --blue: #a0d2db;
     --lightblue: #bee7e8;
     --white: #ffffff;
+    --tns-white: #ffffff7d; 
+    --tns-grey: #62626243;
     --yellow: #f4d35e;
 }
 
@@ -105,7 +108,7 @@ body, html {
     top: 80vh; 
     position: absolute;
     font-size: 10vh; 
-    color: #ffffff7d; 
+    color: var(--tns-white); 
 }
 
 /* --> effects */
@@ -126,8 +129,8 @@ body, html {
 }
 
 .topbox a:hover {
-    color: #ffffff7d;
-    text-shadow: 0 0 0.3em #ffffff7d;
+    color: var(--tns-white);
+    text-shadow: 0 0 0.3em var(--tns-white);
 }
 
 /* textdesc */
@@ -155,6 +158,15 @@ body, html {
     font-size: 1.4vw; 
 }
 
+.textdesc img {
+    width: 6vw; 
+    height: 6vw; 
+
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
 /* --> classes */
 .textdesc .bg {
     background-image: url(assets/backgrounds/textdesc-background.svg); 
@@ -165,6 +177,11 @@ body, html {
 .textdesc .emoji {
     color: var(--blue); 
     text-shadow: 0 3px 0.1em var(--navy);
+}
+
+/* --> effects */
+.textdesc img:hover { 
+    transform: scale(1.1);
 }
 
 @media only screen and (max-width: 1400px) {
