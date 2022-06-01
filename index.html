@@ -64,24 +64,27 @@ You can always message me on GitHub.
                         check out my github!
                     </a>
                 </div>
-                
+
             </div>
         </div>
 
         <div class="textdesc">
+            
             <div class="bg">
-
                 <div class="centered smile-upper">
                     <script>
+                        // Check to see if smiling icon is on screen
                         const observer = new IntersectionObserver(entries => {
                             entries.forEach(entry => {
                                 const waving = entry.target.querySelector(".smile")
                                 
+                                // If it is, play animation
                                 if (entry.isIntersecting) {
                                     waving.classList.add("animate__bounce");
                                     return; 
                                 }
     
+                                // Remove animation class once it is off screen
                                 waving.classList.remove("animate__bounce");
                             });
                         });
@@ -97,9 +100,11 @@ You can always message me on GitHub.
 
                     <div id="logo-cont">
                         <script>
+                            // Store icon information
                             let imgs = ["lua", "java", "html", "css", "kotlin", "python", "js"];
                             let links = ["https://www.lua.org/", "https://www.java.com/", "https://en.wikipedia.org/wiki/HTML", "https://en.wikipedia.org/wiki/CSS", "https://www.kotlinlang.org", "https://www.python.org/", "https://www.javascript.com/"];
 
+                            // Iterate through arrays and pass info to new elements
                             for (var i = 0; i < imgs.length; i++) {
                                 let item = document.createElement("a"); let img = document.createElement("img");
 
@@ -107,6 +112,7 @@ You can always message me on GitHub.
                                 item.target = "_blank"; item.rel = "noopener noreferrer";
                                 item.appendChild(img); 
 
+                                // Add to logo container
                                 document.getElementById("logo-cont").appendChild(item); 
                             }
                         </script>
