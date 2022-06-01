@@ -5,9 +5,15 @@
     --blue: #a0d2db;
     --lightblue: #bee7e8;
     --white: #ffffff;
+    --yellow: #f4d35e;
+
     --tns-white: #ffffff7d; 
     --tns-grey: #62626243;
-    --yellow: #f4d35e;
+}
+
+::-webkit-scrollbar {
+    width: 0px;   
+    height: 0px;
 }
 
 /* markdown */
@@ -25,11 +31,6 @@ a {
 body, html {
     max-width: 100%;
     overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-    width: 0px;   
-    height: 0px;
 }
 
 /* gen */
@@ -151,7 +152,7 @@ body, html {
 
 .textdesc h3 {
     font-size: 1.7vw;
-    color: var(--navyblue); 
+    color: rgba(0, 0, 0, 0.629); 
 }
 
 .textdesc h4 {
@@ -198,7 +199,7 @@ body, html {
     .textdesc h1 { font-size: 4.7vw }
     .textdesc h2 { font-size: 2.3vw }
     .textdesc h3 { font-size: 2vw }
-    .textdesc img { width: 8vw; height: 8vw; }
+    .textdesc img { width: 7.5vw; height: vw; }
 }
 
 @media only screen and (max-width: 1000px) {
