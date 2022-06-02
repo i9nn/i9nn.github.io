@@ -57,13 +57,16 @@ You can always message me on GitHub.
 			}
 
             function editLine() {
+                // Find new window width
                 let windowWidth = Math.round(window.innerWidth / 100) + 2; 
-                                
+                            
+                // Add a line character for around every 100 pixels
                 let lineText = "";
                 for (let i = 0; i < windowWidth; i++) {
                     lineText += "─";
                 }
 
+                // Apply text changes to <span> block
                 document.getElementById("tb-line").textContent = lineText;
             }
 		</script>
@@ -90,6 +93,7 @@ You can always message me on GitHub.
 							};
 							generateIcons(tbMap, "tb-cont");
 
+                            // Perform editLine() every time the window is resized
                             editLine(); window.addEventListener("resize", editLine, true);
 						</script>
 					</p>
