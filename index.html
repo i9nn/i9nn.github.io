@@ -55,22 +55,42 @@ You can always message me on GitHub.
 					document.getElementById(id).appendChild(item); 
 				}
 			}
+
+            function editLine() {
+                let windowWidth = Math.round(window.innerWidth / 100) + 2; 
+                                
+                let lineText = "";
+                for (let i = 0; i < windowWidth; i++) {
+                    lineText += "─";
+                }
+
+                document.getElementById("tb-line").textContent = lineText;
+            }
 		</script>
 
         <div class="topbox">
             <div class="bg">
-
 				<div>
 					<p class="tcorner-icon" id="tb-cont">
-						<b>{ i } <span style="color: var(--yellow)"><i>v3</i></span> <span style="color: var(--lightblue)">────────────────</span></b> 
+
+						<b>{ i } 
+                            <span style="color: var(--yellow)">
+                                <i>v3</i>
+                            </span> 
+                            
+                            <span id="tb-line" style="color: var(--lightblue)">
+                                
+                            </span>
+                        </b> 
 
 						<script>
 							let tbMap = {
 								"discord": "https://discordapp.com/users/614954208139149319/",
 								"steam": "https://steamcommunity.com/id/i9nn"
 							};
-
 							generateIcons(tbMap, "tb-cont");
+
+                            editLine(); window.addEventListener("resize", editLine, true);
 						</script>
 					</p>
 
@@ -85,27 +105,10 @@ You can always message me on GitHub.
                         check out my github!
                     </a>
                 </div>
-
             </div>
         </div>
 
         <div class="textdesc" id="textdesc">
-            <script>
-                for (var i = 0; i < 4; i++) {
-                    var corner = document.createElement("img");
-                    corner.src = "assets/backgrounds/textdesc-corner.svg"; corner.classList.add("corner"); 
-
-                    var degr = (i + 1) * 90; 
-                    corner.style.transform = "rotate(" + degr + "deg)";
-
-                    if (i < 2) { corner.style.top = 0; } else { corner.style.bottom = 0; }
-                    if (i == 0 || i == 3) { corner.style.left = 0; } else { corner.style.right = 0; }
-
-                    document.getElementById("textdesc").append(corner);
-                }
-            </script>
-
-
             <div class="bg">
                 <div class="centered smile-upper">
                     <script>
@@ -141,17 +144,14 @@ You can always message me on GitHub.
 								"java": "https://www.java.com/",
 								"html": "https://en.wikipedia.org/wiki/HTML",
 								"css": "https://en.wikipedia.org/wiki/CSS",
+                                "js": "https://www.javascript.com/",
+                                "python": "https://www.python.org/",
 								"kotlin": "https://www.kotlinlang.org",
-								"python": "https://www.python.org/",
-								"js": "https://www.javascript.com/"
 							};
-                            
                             generateIcons(lgMap, "logo-cont", "logo"); 
                         </script>
                     </div>
-
                 </div>
-
             </div>
         </div>
 
