@@ -36,25 +36,42 @@ You can always message me on GitHub.
     <body>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+		<script>
+			function generateIcons(iconMap, id) {
+				for (var ins in iconMap) {
+					// Instantialize new elements 
+					let item = document.createElement("a"); let img = document.createElement("img");
+
+					// Apply new properties to elements
+					item.target = "_blank"; item.rel = "noopener noreferrer";
+					item.href = iconMap[ins]; img.src = "assets/logos/" + ins + ".svg";
+					item.appendChild(img); 
+
+					// Add to logo container
+					document.getElementById(id).appendChild(item); 
+				}
+			}
+		</script>
+
         <div class="topbox">
             <div class="bg">
 
-                <header>
-                    <div>
-                        <p class="tcorner-icon">
-                            <b>{ i } <span style="color: var(--yellow)"><i>v3</i></span> <span style="color: var(--lightblue)">────────────────</span></b> 
+				<div>
+					<p class="tcorner-icon" id="tb-cont">
+						<b>{ i } <span style="color: var(--yellow)"><i>v3</i></span> <span style="color: var(--lightblue)">────────────────</span></b> 
 
-                            <a href="https://discordapp.com/users/614954208139149319/" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/logos/discord.svg">
-                            </a>
-                            <a href="https://steamcommunity.com/id/i9nn" target="_blank" rel="noopener noreferrer">
-                                <img src="assets/logos/steam.svg">
-                            </a>
-                        </p>
+						<script>
+							let tbMap = {
+								"discord": "https://discordapp.com/users/614954208139149319/",
+								"steam": "https://steamcommunity.com/id/i9nn"
+							};
 
-                        <p class="arrow animate__animated animate__fadeInDown animate__delay-1s">↓</p>
-                    </div>
-                </header>
+							generateIcons(tbMap, "tb-cont");
+						</script>
+					</p>
+
+					<p class="arrow animate__animated animate__fadeInDown animate__delay-1s">↓</p>
+				</div>
 
                 <div class="centered">
                     <h1><b>{ i9nn }</b></h1>
@@ -100,21 +117,17 @@ You can always message me on GitHub.
 
                     <div id="logo-cont">
                         <script>
-                            // Store icon information
-                            let imgs = ["lua", "java", "html", "css", "kotlin", "python", "js"];
-                            let links = ["https://www.lua.org/", "https://www.java.com/", "https://en.wikipedia.org/wiki/HTML", "https://en.wikipedia.org/wiki/CSS", "https://www.kotlinlang.org", "https://www.python.org/", "https://www.javascript.com/"];
-
-                            // Iterate through arrays and pass info to new elements
-                            for (var i = 0; i < imgs.length; i++) {
-                                let item = document.createElement("a"); let img = document.createElement("img");
-
-                                item.href = links[i]; img.src = "assets/logos/" + imgs[i] + ".svg";
-                                item.target = "_blank"; item.rel = "noopener noreferrer";
-                                item.appendChild(img); 
-
-                                // Add to logo container
-                                document.getElementById("logo-cont").appendChild(item); 
-                            }
+							let lgMap = {
+								"lua": "https://www.lua.org/",
+								"java": "https://www.java.com/",
+								"html": "https://en.wikipedia.org/wiki/HTML",
+								"css": "https://en.wikipedia.org/wiki/CSS",
+								"kotlin": "https://www.kotlinlang.org",
+								"python": "https://www.python.org/",
+								"js": "https://www.javascript.com/"
+							};
+                            
+                            generateIcons(lgMap, "logo-cont"); 
                         </script>
                     </div>
 
