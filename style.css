@@ -95,15 +95,6 @@ body, html {
     width: 2vw; 
 }
 
-.topbox .bcorner-icon {
-    color: #ffffff3b;
-    position: absolute;
-    text-align: right; 
-    font-size: 1.2vw; 
-    bottom: 1vw; 
-    right: 1vw; 
-}
-
 .topbox .arrow {
     width: 100%;
     height: 20vh;
@@ -139,6 +130,7 @@ body, html {
 .textdesc {
     height: 70vh; 
     background: linear-gradient(180deg, var(--darknavy) -40%, var(--white));
+    position: relative;
 }
 
 .textdesc h1 {
@@ -160,7 +152,25 @@ body, html {
     font-size: 1.4vw; 
 }
 
-.textdesc img {
+.textdesc .corner {
+    position: absolute;
+
+    height: 11%; 
+    width: height;
+}
+
+.textdesc .lcorner {
+    bottom: 0;
+    left: 0; 
+}
+
+.textdesc .rcorner {
+    top: 0;
+    right: 0;
+    transform: rotate(180deg); 
+}
+
+.textdesc .logo {
     width: 6vw; 
     height: 6vw; 
 
@@ -184,7 +194,7 @@ body, html {
 }
 
 /* --> effects */
-.textdesc img:hover { 
+.textdesc .logo:hover { 
     transform: scale(1.1);
     filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.5));
 }
