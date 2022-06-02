@@ -152,24 +152,6 @@ body, html {
     font-size: 1.4vw; 
 }
 
-.textdesc .corner {
-    position: absolute;
-
-    height: 11%; 
-    width: height;
-}
-
-.textdesc .lcorner {
-    bottom: 0;
-    left: 0; 
-}
-
-.textdesc .rcorner {
-    top: 0;
-    right: 0;
-    transform: rotate(180deg); 
-}
-
 .textdesc .logo {
     width: 6vw; 
     height: 6vw; 
@@ -199,18 +181,18 @@ body, html {
     filter: drop-shadow(3px 5px 6px rgba(0, 0, 0, 0.5));
 }
 
+/* --> ugly ass media queries */
 @media only screen and (max-width: 1300px) {
     .topbox h1 { font-size: 12.3vw }
     .topbox h2 { font-size: 3.9vw }
     .topbox a { font-size: 2.5vw }
     .topbox .tcorner-icon { font-size: 2.5vw }
     .topbox .tcorner-icon img { height: 2.5vw; width: 2.5vw }
-    .topbox .bcorner-icon { font-size: 2vw }
 
     .textdesc h1 { font-size: 4.7vw }
     .textdesc h2 { font-size: 2.3vw }
     .textdesc h3 { font-size: 2vw }
-    .textdesc img { width: 7.5vw; height: vw; }
+    .textdesc .logo { width: 7.5vw; height: 7.5vw;}
 }
 
 @media only screen and (max-width: 1000px) {
@@ -219,12 +201,11 @@ body, html {
     .topbox a { font-size: 3.5vw }
     .topbox .tcorner-icon { font-size: 2.9vw }
     .topbox .tcorner-icon img { height: 2.9vw; width: 2.9vw }
-    .topbox .bcorner-icon { font-size: 2.4vw }
 
     .textdesc h1 { font-size: 6vw }
     .textdesc h2 { font-size: 3.3vw }
     .textdesc h3 { font-size: 2.8vw }
-    .textdesc img { width: 10vw; height: 10vw; }
+    .textdesc .logo { width: 10vw; height: 10vw; }
 }
 
 @media only screen and (max-width: 800px) {
@@ -233,14 +214,12 @@ body, html {
     .topbox a { font-size: 4.2vw }
     .topbox .tcorner-icon { font-size: 3.2vw }
     .topbox .tcorner-icon img { height: 3.2vw; width: 3.2vw }
-    .topbox .bcorner-icon { font-size: 2.7vw }
 
     .textdesc h1 { font-size: 7vw }
     .textdesc h2 { font-size: 3.8vw }
     .textdesc h3 { font-size: 3.4vw }
-    .textdesc img { width: 11vw; height: 11vw; }
+    .textdesc .logo { width: 11vw; height: 11vw; }
 }
-
 
 @media only screen and (max-width: 600px) {
     .topbox h1 { font-size: 20vw }
@@ -248,12 +227,11 @@ body, html {
     .topbox a { font-size: 5.4vw }
     .topbox .tcorner-icon { font-size: 4vw }
     .topbox .tcorner-icon img { height: 4vw; width: 4vw }
-    .topbox .bcorner-icon { font-size: 3.5vw }
 
     .textdesc h1 { font-size: 8vw }
     .textdesc h2 { font-size: 4.3vw }
     .textdesc h3 { font-size: 3.8vw }
-    .textdesc img { width: 12vw; height: 12vw; }
+    .textdesc .logo { width: 12vw; height: 12vw; }
 }
 
 
