@@ -1,3 +1,11 @@
+@keyframes text-kerning {
+  from {
+    letter-spacing: 5px;
+  }
+  to {
+    letter-spacing: 3px;
+  }
+}
 * {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 300px;
@@ -11,12 +19,8 @@
 a, a:visited {
   color: white;
   text-decoration: none;
+  transition-property: background-color, color, padding;
   transition-duration: 0.5s;
-}
-a:hover, a:visited:hover {
-  background-color: white;
-  color: black;
-  padding: 5px;
 }
 
 header {
@@ -31,6 +35,10 @@ header {
 }
 header h1 {
   font-size: 100%;
+  transition: 0.3s filter ease-out;
+}
+header h1:hover {
+  filter: blur(10px);
 }
 header div {
   align-items: center;
@@ -56,10 +64,67 @@ header div a:hover, header div a:visited:hover {
 }
 
 .about-me p {
-  width: 50%;
-  font-size: 12%;
+  text-align: center;
+  height: 30%;
+  width: 60%;
+  transition: 0.3s filter ease-in-out;
+  font-size: 9%;
   letter-spacing: 5px;
 }
-.about-me a {
+.about-me p a, .about-me p a:visited {
+  font-size: 100%;
+  transition: 0.3s filter ease-in-out;
+}
+.about-me p a:hover, .about-me p a:visited:hover {
+  filter: blur(2px);
+}
+.about-me .back {
+  color: white;
   font-size: 20%;
+}
+.about-me .back:hover {
+  background-color: white;
+  color: black;
+  padding: 5px;
+}
+
+.projects p {
+  text-align: center;
+  height: 30%;
+}
+.projects a {
+  font-size: 20%;
+}
+.projects .back {
+  color: white;
+  font-size: 20%;
+}
+.projects .back:hover {
+  background-color: white;
+  color: black;
+  padding: 5px;
+}
+
+@media screen and (max-width: 1300px) {
+  .about-me p {
+    height: 30%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .about-me p {
+    font-size: 8%;
+    height: 40%;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 700px) {
+  * {
+    font-size: 120px;
+  }
+  header div a, header div a:visited {
+    font-size: 10%;
+  }
+  .about-me {
+    font-size: 180%;
+  }
 }/*# sourceMappingURL=style.css.map */

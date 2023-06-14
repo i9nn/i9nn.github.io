@@ -4,6 +4,11 @@
     justify-content: center;
 }
 
+@keyframes text-kerning {
+    from { letter-spacing: 5px; }
+    to { letter-spacing: 3px; }
+}
+
 * {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 300px;
@@ -17,13 +22,8 @@
 a, a:visited {
     color: white;
     text-decoration: none;
+    transition-property: background-color, color, padding;
     transition-duration: 0.5s;
-
-    &:hover {
-        background-color: white;
-        color: black;
-        padding: 5px;
-    }
 }
 
 header {
@@ -37,6 +37,11 @@ header {
 
     h1 {
         font-size: 100%;
+        transition: 0.3s filter ease-out;
+
+        &:hover {
+            filter: blur(10px);
+        }
     }
 
     div {
@@ -65,15 +70,90 @@ header {
 
 .about-me {
     p {
-        width: 50%;
+        text-align: center;
+        height: 30%;
+        width: 60%;
+        transition: 0.3s filter ease-in-out;
 
-        font-size: 12%;
+        font-size: 9%;
         letter-spacing: 5px;
+
+        a, a:visited {
+            font-size: 100%;
+            transition: 0.3s filter ease-in-out;
+
+            &:hover {
+                filter: blur(2px);
+            }
+        }
+    }
+    
+    .back {
+        color: white;
+        font-size: 20%;
+
+        &:hover {
+            background-color: white;
+            color: black;
+            padding: 5px;
+        }
+    }
+}
+
+.projects {
+    p {
+        text-align: center;
+        height: 30%;
     }
 
     a {
         font-size: 20%;
     }
+
+    .back {
+        color: white;
+        font-size: 20%;
+
+        &:hover {
+            background-color: white;
+            color: black;
+            padding: 5px;
+        }
+    }
 }
 
+@media screen and (max-width: 1300px){
+    .about-me {
+        p {
+            height: 30%;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .about-me {
+        p {
+            font-size: 8%;
+            height: 40%;
+            width: 80%;
+        }
+    }
+}
+
+
+@media screen and (max-width: 700px){
+    * {
+        font-size: 120px;
+    }
+
+    header div {
+        a, a:visited {
+            font-size: 10%;
+        }
+    }
+
+    .about-me {
+        font-size: 180%;
+    }
+}
 
