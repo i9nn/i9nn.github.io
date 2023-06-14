@@ -1,0 +1,79 @@
+@mixin flex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 300px;
+    font-weight: 100;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+    text-align: center;
+}
+
+a, a:visited {
+    color: white;
+    text-decoration: none;
+    transition-duration: 0.5s;
+
+    &:hover {
+        background-color: white;
+        color: black;
+        padding: 5px;
+    }
+}
+
+header {
+    @include flex; 
+
+    background: black;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+    width: 100vw;
+
+    h1 {
+        font-size: 100%;
+    }
+
+    div {
+        @include flex; 
+
+        height: 40px;
+        width: 40%;
+
+        a, a:visited {
+            @include flex;
+
+            color: white;
+            font-size: 6%;
+            height: 100%;
+            text-decoration: none;
+            width: 25%;
+
+            &:hover {
+                background-color: white;
+                color: black;
+                padding: 5px;
+            }
+        }
+    }
+}
+
+.about-me {
+    p {
+        width: 50%;
+
+        font-size: 12%;
+        letter-spacing: 5px;
+    }
+
+    a {
+        font-size: 20%;
+    }
+}
+
+
