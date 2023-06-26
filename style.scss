@@ -10,6 +10,7 @@
 }
 
 * {
+    color: white;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 300px;
     font-weight: 100;
@@ -20,7 +21,6 @@
 }
 
 a, a:visited {
-    color: white;
     text-decoration: none;
     transition-property: background-color, color, padding;
     transition-duration: 0.5s;
@@ -48,7 +48,7 @@ header {
         @include flex; 
 
         height: 40px;
-        width: 40%;
+        width: 50%;
 
         a, a:visited {
             @include flex;
@@ -57,7 +57,7 @@ header {
             font-size: 6%;
             height: 100%;
             text-decoration: none;
-            width: 25%;
+            width: 30%;
 
             &:hover {
                 background-color: white;
@@ -71,7 +71,7 @@ header {
 .about-me {
     p {
         text-align: center;
-        height: 30%;
+        height: fit-content;
         width: 60%;
         transition: 0.3s filter ease-in-out;
 
@@ -122,19 +122,10 @@ header {
     }
 }
 
-@media screen and (max-width: 1300px){
-    .about-me {
-        p {
-            height: 30%;
-        }
-    }
-}
-
 @media screen and (max-width: 1000px){
     .about-me {
         p {
             font-size: 8%;
-            height: 40%;
             width: 80%;
         }
     }
@@ -147,8 +138,11 @@ header {
     }
 
     header div {
+        width: 40%;
+
         a, a:visited {
             font-size: 10%;
+            width: 33%;
         }
     }
 
@@ -157,3 +151,12 @@ header {
     }
 }
 
+@media screen and (max-width: 500px){
+    header div {
+        width: 80%;
+
+        a, a:visited {
+            font-size: 10%;
+        }
+    }
+}
