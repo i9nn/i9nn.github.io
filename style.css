@@ -16,6 +16,9 @@
   padding: 0px;
   text-align: center;
 }
+* body {
+  background: black;
+}
 
 a, a:visited {
   text-decoration: none;
@@ -23,11 +26,22 @@ a, a:visited {
   transition-duration: 0.5s;
 }
 
+.background {
+  aspect-ratio: 0.666;
+  filter: invert(1);
+  height: 120vh;
+  left: 50%;
+  opacity: 0.2;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1000;
+}
+
 header {
   align-items: center;
   display: flex;
   justify-content: center;
-  background: black;
   flex-direction: column;
   color: white;
   height: 100vh;
