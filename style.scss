@@ -1,17 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
+
 @mixin flex {
     align-items: center;
     display: flex;
     justify-content: center;
 }
 
-@keyframes text-kerning {
-    from { letter-spacing: 5px; }
-    to { letter-spacing: 3px; }
+@keyframes move-reset {
+    to { transform: perspective(150px) rotateX(0deg) rotateY(0deg) }
 }
+
+@keyframes pulse {
+    from { height: 120vh }
+    to { height: 125vh }
+}
+
+@keyframes pulse-text {
+    from { font-size: 140% }
+    to { font-size: 160% }
+}
+
 
 * {
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'JetBrains Mono', monospace;
     font-size: 300px;
     font-weight: 100;
     margin: 0px;
@@ -22,15 +34,24 @@
     body {
         background: black;
     }
+
+    ::selection {
+        background-color: rgba(255, 255, 255, 0.1)
+    }
 }
 
 a, a:visited {
     text-decoration: none;
-    transition-property: background-color, color, padding;
+    transition-property: background-color, border-radius, color, padding;
     transition-duration: 0.5s;
 }
 
+.reset-anim {
+    animation: 1s ease-out forwards move-reset;
+}
+
 .background {
+    animation: 10s ease-in-out infinite alternate pulse; 
     aspect-ratio: 0.666;
     filter: invert(1);
     height: 120vh;
@@ -42,6 +63,22 @@ a, a:visited {
     z-index: -1000;
 }
 
+.waves {
+    aspect-ratio: 16/9;
+    height: 120vh;
+    width: 120vh * 16/9;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -999;
+}
+
+.blur {
+    opacity: 0.2;
+    filter: blur(40px);
+}
+
 header {
     @include flex; 
 
@@ -50,16 +87,24 @@ header {
     height: 100vh;
     width: 100vw;
 
-    h1 {
-        font-size: 100%;
-        transition: 0.3s filter ease-out;
-
-        &:hover {
-            filter: blur(10px);
+    .title-container {
+        h1 {
+            color: white;
+            font-size: 100%;
+            transition: 0.3s filter ease-out;
+    
+            &:hover {
+                filter: blur(10px);
+            }
         }
     }
 
-    div {
+    h2 {
+        font-size: 6%;
+        padding: 3px;
+    }
+
+    .button-holder {
         @include flex; 
 
         height: 40px;
@@ -71,11 +116,13 @@ header {
             color: white;
             font-size: 6%;
             height: 100%;
+            margin: 3px;
             text-decoration: none;
             width: 30%;
 
             &:hover {
-                background-color: white;
+                background-color: rgba(255, 255, 255, 0.7);
+                border-radius: 20%;
                 color: black;
                 padding: 5px;
             }
@@ -84,6 +131,11 @@ header {
 }
 
 .about-me {
+    @include flex; 
+
+    height: 100vh;
+    width: 100vw;
+
     p {
         text-align: center;
         height: fit-content;
@@ -91,7 +143,8 @@ header {
         transition: 0.3s filter ease-in-out;
 
         font-size: 9%;
-        letter-spacing: 5px;
+        letter-spacing: 3px;
+        line-height: 110%;
 
         a, a:visited {
             font-size: 100%;
@@ -100,6 +153,13 @@ header {
             &:hover {
                 filter: blur(2px);
             }
+        }
+
+        .faded {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 50%;
+            line-height: 60%;
+            margin: 0px;
         }
     }
     
@@ -116,9 +176,14 @@ header {
 }
 
 .projects {
+    @include flex;
+    
     p {
         text-align: center;
-        height: 30%;
+        height: 80%;
+        text-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 200px rgba(255, 255, 255, 1);
+        overflow: visible;
+        animation: 10s ease-in-out alternate infinite pulse-text;
     }
 
     a {
@@ -152,7 +217,7 @@ header {
         font-size: 120px;
     }
 
-    header div {
+    header .button-holder {
         width: 40%;
 
         a, a:visited {
@@ -167,7 +232,11 @@ header {
 }
 
 @media screen and (max-width: 500px){
-    header div {
+    header h2 {
+        font-size: 13%;
+    }
+
+    header .button-holder {
         width: 80%;
 
         a, a:visited {

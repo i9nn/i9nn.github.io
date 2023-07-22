@@ -1,14 +1,28 @@
-@keyframes text-kerning {
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap");
+@keyframes move-reset {
+  to {
+    transform: perspective(150px) rotateX(0deg) rotateY(0deg);
+  }
+}
+@keyframes pulse {
   from {
-    letter-spacing: 5px;
+    height: 120vh;
   }
   to {
-    letter-spacing: 3px;
+    height: 125vh;
+  }
+}
+@keyframes pulse-text {
+  from {
+    font-size: 140%;
+  }
+  to {
+    font-size: 160%;
   }
 }
 * {
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "JetBrains Mono", monospace;
   font-size: 300px;
   font-weight: 100;
   margin: 0px;
@@ -19,14 +33,25 @@
 * body {
   background: black;
 }
+* ::-moz-selection {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+* ::selection {
+  background-color: rgba(255, 255, 255, 0.1);
+}
 
 a, a:visited {
   text-decoration: none;
-  transition-property: background-color, color, padding;
+  transition-property: background-color, border-radius, color, padding;
   transition-duration: 0.5s;
 }
 
+.reset-anim {
+  animation: 1s ease-out forwards move-reset;
+}
+
 .background {
+  animation: 10s ease-in-out infinite alternate pulse;
   aspect-ratio: 0.666;
   filter: invert(1);
   height: 120vh;
@@ -38,6 +63,22 @@ a, a:visited {
   z-index: -1000;
 }
 
+.waves {
+  aspect-ratio: 16/9;
+  height: 120vh;
+  width: 213.3333333333vh;
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -999;
+}
+
+.blur {
+  opacity: 0.2;
+  filter: blur(40px);
+}
+
 header {
   align-items: center;
   display: flex;
@@ -47,36 +88,50 @@ header {
   height: 100vh;
   width: 100vw;
 }
-header h1 {
+header .title-container h1 {
+  color: white;
   font-size: 100%;
   transition: 0.3s filter ease-out;
 }
-header h1:hover {
+header .title-container h1:hover {
   filter: blur(10px);
 }
-header div {
+header h2 {
+  font-size: 6%;
+  padding: 3px;
+}
+header .button-holder {
   align-items: center;
   display: flex;
   justify-content: center;
   height: 40px;
   width: 50%;
 }
-header div a, header div a:visited {
+header .button-holder a, header .button-holder a:visited {
   align-items: center;
   display: flex;
   justify-content: center;
   color: white;
   font-size: 6%;
   height: 100%;
+  margin: 3px;
   text-decoration: none;
   width: 30%;
 }
-header div a:hover, header div a:visited:hover {
-  background-color: white;
+header .button-holder a:hover, header .button-holder a:visited:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 20%;
   color: black;
   padding: 5px;
 }
 
+.about-me {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
 .about-me p {
   text-align: center;
   height: -moz-fit-content;
@@ -84,7 +139,8 @@ header div a:hover, header div a:visited:hover {
   width: 60%;
   transition: 0.3s filter ease-in-out;
   font-size: 9%;
-  letter-spacing: 5px;
+  letter-spacing: 3px;
+  line-height: 110%;
 }
 .about-me p a, .about-me p a:visited {
   font-size: 100%;
@@ -92,6 +148,12 @@ header div a:hover, header div a:visited:hover {
 }
 .about-me p a:hover, .about-me p a:visited:hover {
   filter: blur(2px);
+}
+.about-me p .faded {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 50%;
+  line-height: 60%;
+  margin: 0px;
 }
 .about-me .back {
   color: white;
@@ -103,9 +165,17 @@ header div a:hover, header div a:visited:hover {
   padding: 5px;
 }
 
+.projects {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 .projects p {
   text-align: center;
-  height: 30%;
+  height: 80%;
+  text-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 200px rgb(255, 255, 255);
+  overflow: visible;
+  animation: 10s ease-in-out alternate infinite pulse-text;
 }
 .projects a {
   font-size: 20%;
@@ -130,10 +200,10 @@ header div a:hover, header div a:visited:hover {
   * {
     font-size: 120px;
   }
-  header div {
+  header .button-holder {
     width: 40%;
   }
-  header div a, header div a:visited {
+  header .button-holder a, header .button-holder a:visited {
     font-size: 10%;
     width: 33%;
   }
@@ -142,10 +212,13 @@ header div a:hover, header div a:visited:hover {
   }
 }
 @media screen and (max-width: 500px) {
-  header div {
+  header h2 {
+    font-size: 13%;
+  }
+  header .button-holder {
     width: 80%;
   }
-  header div a, header div a:visited {
+  header .button-holder a, header .button-holder a:visited {
     font-size: 10%;
   }
 }/*# sourceMappingURL=style.css.map */
