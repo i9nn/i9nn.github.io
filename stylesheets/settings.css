@@ -1,0 +1,23 @@
+@keyframes move-reset {
+  to {
+    transform: perspective(150px) rotateX(0deg) rotateY(0deg);
+  }
+}
+@keyframes pulse {
+  from {
+    height: 120vh;
+    transform: rotateX("0deg");
+  }
+  to {
+    height: 125vh;
+    transform: rotateX("90deg");
+  }
+}
+@keyframes pulse-text {
+  from {
+    font-size: 140%;
+  }
+  to {
+    font-size: 160%;
+  }
+}/*# sourceMappingURL=settings.css.map */

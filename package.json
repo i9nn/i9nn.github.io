@@ -1,0 +1,16 @@
+{
+  "name": "i9nn.com",
+  "version": "1.0.0",
+  "description": "My website for my programming portfolio and interests. A test in HTML and CSS designed to help me understand some of the main concepts a little bit more.\r Please feel free to poke around.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "stylelint": "^15.10.2",
+    "stylelint-config-standard": "^34.0.0",
+    "stylelint-config-standard-scss": "^10.0.0"
+  }
+}

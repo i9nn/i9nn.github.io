@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap");
 @keyframes move-reset {
   to {
@@ -25,13 +26,10 @@
   font-family: "JetBrains Mono", monospace;
   font-size: 300px;
   font-weight: 100;
-  margin: 0px;
+  margin: 0;
   overflow: hidden;
-  padding: 0px;
+  padding: 0;
   text-align: center;
-}
-* body {
-  background: black;
 }
 * ::-moz-selection {
   background-color: rgba(255, 255, 255, 0.1);
@@ -42,7 +40,7 @@
 
 a, a:visited {
   text-decoration: none;
-  transition-property: background-color, border-radius, color, padding;
+  transition-property: background-color, color, padding, transform;
   transition-duration: 0.5s;
 }
 
@@ -65,6 +63,7 @@ a, a:visited {
 
 .waves {
   aspect-ratio: 16/9;
+  filter: brightness(150%);
   height: 120vh;
   width: 213.3333333333vh;
   left: 50%;
@@ -159,10 +158,16 @@ header .button-holder a:hover, header .button-holder a:visited:hover {
   color: white;
   font-size: 20%;
 }
+.about-me .back::before {
+  content: "✱ ";
+}
 .about-me .back:hover {
   background-color: white;
   color: black;
   padding: 5px;
+}
+.about-me .back:hover::before {
+  transform: rotateX("90deg");
 }
 
 .projects {
@@ -221,4 +226,4 @@ header .button-holder a:hover, header .button-holder a:visited:hover {
   header .button-holder a, header .button-holder a:visited {
     font-size: 10%;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=rewritten.css.map */

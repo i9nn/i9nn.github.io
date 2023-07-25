@@ -1,56 +1,33 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap');
-
-@mixin flex {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-}
-
-@keyframes move-reset {
-    to { transform: perspective(150px) rotateX(0deg) rotateY(0deg) }
-}
-
-@keyframes pulse {
-    from { height: 120vh }
-    to { height: 125vh }
-}
-
-@keyframes pulse-text {
-    from { font-size: 140% }
-    to { font-size: 160% }
-}
-
+@use "./settings.scss" as s;
+@import "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&display=swap";
 
 * {
     color: white;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 300px;
-    font-weight: 100;
-    margin: 0px;
+    font: 100 300px "JetBrains Mono", monospace;
+    margin: 0;
     overflow: hidden;
-    padding: 0px;
+    padding: 0;
     text-align: center;
 
     body {
         background: black;
     }
 
+    a, a:visited {
+        text-decoration: none;
+        transition: all 0.5s;
+    }
+
     ::selection {
-        background-color: rgba(255, 255, 255, 0.1)
+        background-color: rgba(255 255 255 / 10%);
     }
 }
 
-a, a:visited {
-    text-decoration: none;
-    transition-property: background-color, border-radius, color, padding;
-    transition-duration: 0.5s;
-}
-
 .reset-anim {
-    animation: 1s ease-out forwards move-reset;
+    animation: 0.2s ease-out forwards move-reset;
 }
 
-.background {
+.circle-bg {
     animation: 10s ease-in-out infinite alternate pulse; 
     aspect-ratio: 0.666;
     filter: invert(1);
@@ -63,40 +40,57 @@ a, a:visited {
     z-index: -1000;
 }
 
-.waves {
-    aspect-ratio: 16/9;
+.main-bg {
+    filter: brightness(150%);
     height: 120vh;
-    width: 120vh * 16/9;
     left: 50%;
     position: fixed;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: 213vh;
     z-index: -999;
 }
 
 .blur {
-    opacity: 0.2;
     filter: blur(40px);
+    opacity: 0.2;
+}
+
+.back {
+    @include s.flex;
+
+    color: white;
+    font-size: 20%;
+
+    &::before {
+        content: "✱";
+        left: 40%;
+        transition: all 0.1s ease-out;
+    }
+
+    &:hover {
+        background-color: white;
+        color: black;
+        padding: 5px;
+
+        &::before {
+            font-size: 120%;
+        }
+    }
 }
 
 header {
-    @include flex; 
+    @include s.flex; 
 
     flex-direction: column;
     color: white;
     height: 100vh;
     width: 100vw;
 
-    .title-container {
-        h1 {
-            color: white;
-            font-size: 100%;
-            transition: 0.3s filter ease-out;
-    
-            &:hover {
-                filter: blur(10px);
-            }
-        }
+    .title-container h1 {
+        color: white;
+        font-size: 100%;
+        transition: filter 0.3s, transform 0.4s ease-in-out;
     }
 
     h2 {
@@ -105,13 +99,13 @@ header {
     }
 
     .button-holder {
-        @include flex; 
+        @include s.flex; 
 
-        height: 40px;
+        height: 5%;
         width: 50%;
 
         a, a:visited {
-            @include flex;
+            @include s.flex;
 
             color: white;
             font-size: 6%;
@@ -131,20 +125,19 @@ header {
 }
 
 .about-me {
-    @include flex; 
+    @include s.flex; 
 
     height: 100vh;
     width: 100vw;
 
     p {
-        text-align: center;
-        height: fit-content;
-        width: 60%;
-        transition: 0.3s filter ease-in-out;
-
         font-size: 9%;
+        height: fit-content;
         letter-spacing: 3px;
         line-height: 110%;
+        text-align: center;
+        transition: 0.3s filter ease-in-out;
+        width: 60%;
 
         a, a:visited {
             font-size: 100%;
@@ -156,49 +149,27 @@ header {
         }
 
         .faded {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255 255 255 / 0.5);
             font-size: 50%;
             line-height: 60%;
-            margin: 0px;
-        }
-    }
-    
-    .back {
-        color: white;
-        font-size: 20%;
-
-        &:hover {
-            background-color: white;
-            color: black;
-            padding: 5px;
+            margin: 0;
         }
     }
 }
 
 .projects {
-    @include flex;
+    @include s.flex;
     
     p {
-        text-align: center;
-        height: 80%;
-        text-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 0 200px rgba(255, 255, 255, 1);
-        overflow: visible;
         animation: 10s ease-in-out alternate infinite pulse-text;
+        height: 80%;
+        overflow: visible;
+        text-align: center;
+        text-shadow: 0 0 40px rgba(255 255 255 / 0.4), 0 0 200px rgb(255 255 255);
     }
 
-    a {
+    a, a:visited {
         font-size: 20%;
-    }
-
-    .back {
-        color: white;
-        font-size: 20%;
-
-        &:hover {
-            background-color: white;
-            color: black;
-            padding: 5px;
-        }
     }
 }
 

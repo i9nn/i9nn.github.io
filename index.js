@@ -19,20 +19,21 @@ function transformElement(el, xyEl) {
 }
 
 // When the mouse is on this element, apply the transformation.
-container.onmousemove = function(e) {
-    layer.classList.remove("reset-anim");
+layer.onmousemove = function(e) {
+	container.classList.remove("reset-anim");
 
 	let xy = [e.clientX, e.clientY];
-	let position = xy.concat([layer]);
+	let position = xy.concat([container]);
 
 	window.requestAnimationFrame(function(){
-		transformElement(layer, position);
+		transformElement(container, position);
 	});
 };
 
 layer.onmouseleave = function(e) {
-    layer.classList.add("reset-anim");
+    container.classList.add("reset-anim");
     setTimeout(function() {
-        layer.style.transform = null;
+        container.style.transform = null;
+		container.classList.remove("reset-anim");
     }, 1000);
 }
