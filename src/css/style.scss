@@ -101,3 +101,19 @@ main {
         }
     }
 }
+
+@media (max-width: 400px) {
+    main {
+        .pfg, .pfg-m {
+            height: 200px;
+        }
+
+        .pfg-m {
+            top: 210px;
+        }
+
+        h1, h2 {
+            font-size: 30px;
+        }
+    }
+}
