@@ -1,4 +1,6 @@
-# i9nn.com
+# iangaunt/web-skeleton
 
-My website for my programming portfolio and interests. A test in HTML and CSS designed to help me understand some of the main concepts a little bit more.
-Please feel free to poke around.
+A very basic webpage backbone in order to create a simple website using a Sass-TypeScript-ESLint toolchain. The provided `package.json` file contains linting for SCSS and TypeScript files.
+
+For simple cloning of the repo, run:
+```git clone https://github.com/iangaunt/web-skeleton.git```
