@@ -46,7 +46,7 @@ main {
     .pfg {
         animation: 5s linear infinite rot;
         aspect-ratio: 1;
-        height: 400px;
+        height: 250px;
         position: absolute;
         z-index: 4;
 
@@ -55,11 +55,11 @@ main {
     .pfg-m {
         animation: 5s linear infinite rot-m;
         aspect-ratio: 1;
-        height: 400px;
+        height: 250px;
         opacity: 0.4;
         position: relative;
         transform: rotateX(180deg);
-        top: 410px;
+        top: 260px;
         z-index: 2;
     }
 
@@ -74,19 +74,19 @@ main {
 
     h1 {
         color: white;
-        font-size: 60px;
+        font-size: 40px;
         height: 300px;
         position: absolute;
-        top: 240px;
+        top: 180px;
         z-index: 10;
     }
 
     h2 {
         color: white;
-        font-size: 60px;
+        font-size: 40px;
         height: 300px;
         position: absolute;
-        bottom: 0px;
+        bottom: -60px;
         z-index: 10;
 
         span {
