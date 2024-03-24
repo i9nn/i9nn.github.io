@@ -48,6 +48,7 @@ main .container header {
 main .container header h1 {
   font-weight: lighter;
   transform: rotateX(40deg);
+  white-space: nowrap;
   width: 50%;
 }
 main .container header .circles, main .container header .x {
@@ -153,6 +154,18 @@ main .container .contents .items .item .music-grid .col {
 }
 main .container .contents .items .item .music-grid .col h3 {
   font-size: 110%;
+}
+
+@media screen and (max-width: 700px) {
+  * {
+    font-size: 9.5px;
+  }
+  main .container header h1 {
+    font-size: 300%;
+  }
+  main .container header .circles, main .container header .x {
+    opacity: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=main.css.map*/

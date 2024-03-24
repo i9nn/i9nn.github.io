@@ -55,6 +55,7 @@ main {
             h1 {
                 font-weight: lighter;
                 transform: rotateX(40deg);
+                white-space: nowrap;
                 width: 50%;
             }
 
@@ -163,6 +164,22 @@ main {
                     }
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width:700px) {
+    * {
+        font-size: 9.5px;
+    }
+
+    main .container header {
+        h1 {
+            font-size: 300%;
+        } 
+
+        .circles, .x {
+            opacity: 0;
         }
     }
 }
