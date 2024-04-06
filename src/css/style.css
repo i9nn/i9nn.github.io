@@ -1,17 +1,12 @@
-@keyframes click-pulse {
-  from {
-    background: rgb(230, 230, 230);
-  }
-  to {
-    background: rgb(255, 255, 255);
-  }
+@font-face {
+  font-family: "Mona Sans";
+  src: url("./Mona-Sans.woff2") format("woff2 supports variations"), url("./Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
 }
-.click-pulse {
-  animation: 1s ease-out click-pulse;
-}
-
 * {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Mona Sans";
+  font-size: 100px;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -21,146 +16,61 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url("../../public/curves.png"), url("../../public/background.svg"), linear-gradient(0deg, rgb(25, 25, 31) 0%, rgb(15, 15, 21) 100%);
   height: 100vh;
+  position: absolute;
   width: 100vw;
 }
-main .container {
+main .card-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   aspect-ratio: 2;
-  border: 2px solid rgb(183, 183, 183);
-  border-radius: 30px;
-  box-shadow: 0px 5px 0px rgb(144, 144, 144);
-  height: 40vh;
-  overflow: hidden;
-}
-main .container header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(230, 230, 230);
-  border-bottom: 2px solid rgb(183, 183, 183);
-  justify-content: flex-start;
-  height: 20%;
+  flex-direction: column;
   position: relative;
+  margin: 50px;
+  width: 700px;
 }
-main .container header h1 {
-  font-weight: lighter;
-  transform: rotateX(40deg);
-  white-space: nowrap;
-  width: 50%;
-}
-main .container header .circles, main .container header .x {
+main .card-cont .card {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 25%;
-}
-main .container header .circles .c {
-  aspect-ratio: 1;
-  border: 1px solid rgb(144, 144, 144);
-  border-radius: 100%;
-  margin: 5px;
-  height: 20%;
-}
-main .container header .circles .red {
-  background: rgb(255, 209, 209);
-}
-main .container header .circles .yellow {
-  background: rgb(237, 255, 133);
-}
-main .container header .circles .green {
-  background: rgb(189, 255, 170);
-}
-main .container header .x {
-  font-size: 120%;
-}
-main .container .contents {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-  width: 100%;
-}
-main .container .contents nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid rgb(183, 183, 183);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  background: linear-gradient(rgba(255, 255, 255, 0.05) 0%, rgba(40, 173, 255, 0.05) 100%);
+  border: 0.5px solid rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  flex-direction: column;
-  margin: 10px;
-  height: 90%;
-  width: 20%;
-}
-main .container .contents nav p {
-  font-size: 50%;
-  letter-spacing: 4px;
-}
-main .container .contents nav button {
-  background: rgb(230, 230, 230);
-  border: 1px solid rgb(144, 144, 144);
-  border-radius: 5px;
-  height: 15%;
-  margin: 2px;
-  transition: background 0.1s;
-  width: 80%;
-}
-main .container .contents nav button:hover {
-  background: rgb(255, 255, 255);
-}
-main .container .contents .items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid rgb(183, 183, 183);
-  border-radius: 20px;
-  flex-direction: column;
-  font-size: 80%;
-  margin: 10px;
-  height: 90%;
-  width: 60%;
-}
-main .container .contents .items .item {
-  width: 80%;
-}
-main .container .contents .items .item hr {
-  margin: 3px;
-}
-main .container .contents .items .item .shinyhunt {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-start;
-  width: 100%;
-}
-main .container .contents .items .item .music-grid {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50%;
-  margin-top: 10px;
-}
-main .container .contents .items .item .music-grid .col {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 33%;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.5);
+  color: white;
   height: 100%;
   flex-direction: column;
-  justify-content: flex-start;
+  overflow: hidden;
+  width: 100%;
+  z-index: 2;
 }
-main .container .contents .items .item .music-grid .col h3 {
-  font-size: 110%;
+main .card-cont .card h1 {
+  font-size: 150%;
+  font-weight: 400;
+}
+main .card-cont .card h2 {
+  font-size: 30%;
+  font-weight: 100;
+}
+main .card-cont .card img {
+  filter: blur(150px);
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 720px) {
   * {
-    font-size: 9.5px;
+    font-size: 70px;
   }
-  main .container header h1 {
-    font-size: 300%;
-  }
-  main .container header .circles, main .container header .x {
-    opacity: 0;
+}
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 45px;
   }
 }/*# sourceMappingURL=style.css.map */
