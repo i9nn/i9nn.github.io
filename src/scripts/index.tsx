@@ -1,49 +1,99 @@
 import "../css/style.css";
 
-const title: HTMLElement = document.getElementById("card"); 
-const container: HTMLElement = document.getElementById("card-cont");
-const circle: HTMLElement = document.getElementById("circle");
+import * as THREE from "three";
 
-const limit: number = 270;
+import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { TeapotGeometry } from "three/examples/jsm/geometries/TeapotGeometry";
+import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
+import { TTFLoader } from "three/examples/jsm/loaders/TTFLoader";
 
-function calculateRotation(x: number, y: number, el: HTMLElement): string {
-	const box = el.getBoundingClientRect();
-	const calcX = -(y - box.y - (box.height / 2)) / limit;
-	const calcY = (x - box.x - (box.width / 2)) / limit;
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-	return "perspective(150px) " + "rotateX(" + calcX + "deg) " + "rotateY(" + calcY + "deg)";
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+camera.position.z = 20;
+
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.setClearColor( 0x000000, 0 );
+document.body.appendChild( renderer.domElement );
+
+// const controls = new OrbitControls(camera, renderer.domElement)
+// controls.target.set( 0, 0, 0 );
+
+const dl = new THREE.DirectionalLight(0xffffff, 3);
+dl.position.set(0, 5, 5);
+scene.add( dl );
+
+const ttfLoader = new TTFLoader();
+const fontLoader = new FontLoader();
+
+let pivot, textMesh;
+let canMove = false;
+let boxY = 0;
+
+ttfLoader.load(
+    "Mona-Sans.ttf",
+    (json) => {
+        const font = fontLoader.parse(json);
+        textMesh = new THREE.Mesh(
+            new TextGeometry("i9nn", {
+                depth: 2,
+                size: 10,
+                font: font,
+
+                bevelEnabled: true,
+		        bevelThickness: 1,
+                bevelSize: 0.4,
+                bevelOffset: 0,
+                bevelSegments: 20
+
+            }),
+            new THREE.MeshStandardMaterial({ 
+                color: 0xffffff,
+            })
+        );
+       
+        textMesh.geometry.computeBoundingBox();
+        textMesh.scale.z = 0.2;
+
+        let vec: THREE.Vector3;
+        const box = textMesh.geometry.boundingBox.getSize(new THREE.Vector3);
+        
+        textMesh.position.set(-box.x / 2, -box.y / 2, 0)
+        boxY = -box.y / 2;
+
+        pivot = new THREE.Group();
+        scene.add(pivot);
+        pivot.add(textMesh);
+
+        canMove = true;
+    }
+)
+
+let pointerX = 0;
+let pointerY = 0;
+
+window.addEventListener("mousemove", (e: MouseEvent) => {
+    pointerX = e.clientX;
+    pointerY = e.clientY;
+});
+
+let t = 0;
+function animate() {
+    if (canMove) {
+        pivot.rotation.set(
+            (pointerY - window.innerHeight / 2) / 2000, 
+            (pointerX - window.innerWidth / 2) / 2000, 
+            0
+        );
+        pivot.position.y = Math.sin(t) / 2 + 0.5;
+    }
+
+	renderer.render( scene, camera );
+    t += 0.01;
 }
-
-function transformElement(el: HTMLElement, xyEl: (number | HTMLElement)[]) {
-	el.style.transform = calculateRotation.apply(null, xyEl);
-    el.style.transitionDuration = "0.1s";
-}
-
-container.onmousemove = function(e) {
-	const xy : (number | HTMLElement)[] = [e.clientX, e.clientY];
-	let position = xy.concat([container!]);
-
-	window.requestAnimationFrame(function(){
-        transformElement(title!, position);
-
-        const box = title.getBoundingClientRect();
-        circle.style.top = e.clientY - box.y - circle.offsetHeight / 2 + "px";
-        circle.style.left = e.clientX - box.x - circle.offsetWidth / 2 + "px";
-        circle.style.transitionDuration = "0.05s";
-	});
-};
-
-container.onmouseenter = function() {
-    circle.style.opacity = "1";
-    circle.style.transitionDuration = "0.5s";
-}
-
-container.onmouseleave = function() {
-    window.requestAnimationFrame(function(){
-        title.style.transform = "perspective(150px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)";
-        title.style.transitionDuration = "0.5s";
-
-        circle.style.transitionDuration = "0.5s";
-        circle.style.opacity = "0";
-	});
-}
+renderer.setAnimationLoop( animate );

@@ -1,11 +1,10 @@
 @font-face {
     font-family: "Mona Sans";
-    src:
-        url('./Mona-Sans.woff2') format('woff2 supports variations'),
-        url('./Mona-Sans.woff2') format('woff2-variations');
+    src: url("../../public/Mona-Sans.ttf") format("woff2 supports variations"), url("../../public/Mona-Sans.ttf") format("woff2-variations");
     font-weight: 200 900;
     font-stretch: 75% 125%;
 }
+
 
 @mixin flex {
     display: flex;
@@ -14,81 +13,34 @@
 }
 
 * {
-    font-family: "Mona Sans";
-    font-size: 100px;
+    font-family: "Mona Sans", sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
-$blue: rgb(20 153 248 / 0.2);
-$l-blue: rgb(40 173 255 / 0.05);
-
-$grey: rgb(25, 25, 31);
-$d-grey: rgb(15, 15, 21);
-
-$white: rgb(255 255 255 / 0.05);
-$l-white: rgb(255 255 255 / 0.2);
-
-main {
-    @include flex;
-    background-image: url("../../public/curves.png"), url("../../public/background.svg"), linear-gradient(0deg, $grey 0%, $d-grey 100%);
+.background {
     height: 100vh;
     position: absolute;
     width: 100vw;
+    z-index: -1;
 
-    .card-cont {
-        @include flex;
-        aspect-ratio: 2;
-        flex-direction: column;
-        position: relative;
-        margin: 50px;
-        width: 700px;
-
-        .card {
-            @include flex;
-    
-            backdrop-filter: blur(8px);
-            background: linear-gradient($white 0%, $l-blue 100%);
-            border: 0.5px solid $l-white;
-            border-radius: 20px;
-            box-shadow: 0px 0px 40px rgb(0 0 0 / 0.5);
-            color: white;
-            height: 100%;
-            flex-direction: column;
-            overflow: hidden;
-            width: 100%;
-            z-index: 2;
-    
-            h1 {
-                font-size: 150%;
-                font-weight: 400;
-            }
-    
-            h2 {
-                font-size: 30%;
-                font-weight: 100;
-            }
-
-            img {
-                filter: blur(150px);
-                height: 150px;
-                width: 150px;
-                position: absolute;
-                background: rgb(255 255 255 / 0.2);
-            }
-        }
-    }
+    background-image: url("../../public/background.svg");
+    background-repeat: repeat;
+    background-color: rgb(26, 26, 29);
 }
 
-@media screen and (max-width: 720px) {
-    * {
-        font-size: 70px;
-    }
-}
+p {
+    position: absolute;
+    color: white;
+    font-size: 35px;
+    font-weight: 100;
+    width: 30%;
 
-@media screen and (max-width: 500px) {
-    * {
-        font-size: 45px;
-    }
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15%;
+
+    border: 1px solid rgb(255 255 255 / 0.2);
+    padding: 7.5px;
 }
