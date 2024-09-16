@@ -1,5 +1,6 @@
 import "../css/style.css";
 
+/*
 import * as THREE from "three";
 
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
@@ -7,10 +8,31 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { TeapotGeometry } from "three/examples/jsm/geometries/TeapotGeometry";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
 import { TTFLoader } from "three/examples/jsm/loaders/TTFLoader";
+*/
 
 import React from "react";
 import { createRoot } from "react-dom/client";
 
+const title = document.getElementById("title");
+title.style.fontFamily = "Helvetica";
+
+const alternateText = ["真狗屎", "진짜 음악", "स्वर्गीय", "开发商", "개발자", "反现代人才", "깨우다", "自由世界"]
+const alternateFonts = ["Arial", "Helvetica", "Tahoma", "Trebuchet MS", "Courier New", "Georgia", "Palatino", "Baskerville"]
+
+setInterval(() => { 
+    let rand = Math.floor(Math.random() * 4);
+    if (rand == 3) {
+        title.innerHTML = alternateText[Math.floor(Math.random() * alternateText.length)];
+        title.style.fontSize = "200px";
+    } else {
+        title.innerHTML = "i9nn";
+        title.style.fontSize = "300px";
+    }
+
+    title.style.fontFamily = alternateFonts[Math.floor(Math.random() * alternateFonts.length)]
+}, 20)
+
+/*
 const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -97,3 +119,4 @@ function animate() {
     t += 0.01;
 }
 renderer.setAnimationLoop( animate );
+*/
