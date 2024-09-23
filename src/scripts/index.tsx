@@ -1,99 +1,74 @@
 import "../css/style.css";
 
-import * as THREE from "three";
-
-import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { TeapotGeometry } from "three/examples/jsm/geometries/TeapotGeometry";
-import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
-import { TTFLoader } from "three/examples/jsm/loaders/TTFLoader";
-
 import React from "react";
 import { createRoot } from "react-dom/client";
 
-const scene = new THREE.Scene();
+function shorten(str: string, title: boolean) {
+    let bound = 20;
+    if (!title) bound = 40;
 
-const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-camera.position.z = 20;
-
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-renderer.setSize( window.innerWidth, window.innerHeight );
-renderer.setClearColor( 0x000000, 0 );
-document.body.appendChild( renderer.domElement );
-
-// const controls = new OrbitControls(camera, renderer.domElement)
-// controls.target.set( 0, 0, 0 );
-
-const dl = new THREE.DirectionalLight(0xffffff, 3);
-dl.position.set(0, 5, 5);
-scene.add( dl );
-
-const ttfLoader = new TTFLoader();
-const fontLoader = new FontLoader();
-
-let pivot, textMesh;
-let canMove = false;
-let boxY = 0;
-
-ttfLoader.load(
-    "Mona-Sans.ttf",
-    (json) => {
-        const font = fontLoader.parse(json);
-        textMesh = new THREE.Mesh(
-            new TextGeometry("i9nn", {
-                depth: 2,
-                size: 10,
-                font: font,
-
-                bevelEnabled: true,
-		        bevelThickness: 1,
-                bevelSize: 0.4,
-                bevelOffset: 0,
-                bevelSegments: 20
-
-            }),
-            new THREE.MeshStandardMaterial({ 
-                color: 0xffffff,
-            })
-        );
-       
-        textMesh.geometry.computeBoundingBox();
-        textMesh.scale.z = 0.2;
-
-        let vec: THREE.Vector3;
-        const box = textMesh.geometry.boundingBox.getSize(new THREE.Vector3);
-        
-        textMesh.position.set(-box.x / 2, -box.y / 2, 0)
-        boxY = -box.y / 2;
-
-        pivot = new THREE.Group();
-        scene.add(pivot);
-        pivot.add(textMesh);
-
-        canMove = true;
-    }
-)
-
-let pointerX = 0;
-let pointerY = 0;
-
-window.addEventListener("mousemove", (e: MouseEvent) => {
-    pointerX = e.clientX;
-    pointerY = e.clientY;
-});
-
-let t = 0;
-function animate() {
-    if (canMove) {
-        pivot.rotation.set(
-            (pointerY - window.innerHeight / 2) / 2000, 
-            (pointerX - window.innerWidth / 2) / 2000, 
-            0
-        );
-        pivot.position.y = Math.sin(t) / 2 + 0.5;
-    }
-
-	renderer.render( scene, camera );
-    t += 0.01;
+    return (str.length > bound) ? str.substring(0, bound + 1) + "..." : str;
 }
-renderer.setAnimationLoop( animate );
+
+function fetchStatus(status: string) {
+    if (status === "online") {
+        return "rgb(59, 165, 92)";
+    } else if (status === "idle") {
+        return "rgb(250, 166, 26)";
+    } else if (status === "dnd") {
+        return "rgb(237, 66, 69)";
+    } else if (status === "offline") {
+        return "rgb(116, 127, 141)";
+    }
+}
+
+function Spotify(props: {listening: boolean}) {
+    if (props.listening) {
+        let songName = json.data.spotify.song;
+        let artistName = json.data.spotify.artist + " • " + json.data.spotify.album;
+
+        return (
+            <div className="spotify">
+                <img className="cover" src={`${json.data.spotify.album_art_url}`}></img>
+                <div className="description">
+                    <h1>{shorten(songName, true)}</h1>
+                    <h2>{shorten(artistName, false)}</h2>
+                </div>
+            </div>
+        )
+    }
+}
+
+function App(props: { json: Object }) {
+    return (
+        <div className="container">
+            <div className="profile">
+                <div className="pfp">
+                    <img src={`https://cdn.discordapp.com/avatars/${json.data.discord_user.id}/${json.data.discord_user.avatar}?size=1024`}></img>
+                    <div className="circle" style={{backgroundColor: fetchStatus(json.data.discord_status)}}></div>
+                </div>
+                <div className="info">
+                    <h1>{`@${json.data.discord_user.username}`}</h1>
+                    <h2>CS student, music producer, graphic designer</h2>
+
+                    <Spotify listening={json.data.listening_to_spotify} />
+                </div>
+            </div>
+        </div>
+    )
+}
+
+let json = null;
+let root = createRoot(document.getElementById("main"));
+
+setInterval(() => {
+    (async() => {
+        const response = await fetch(
+            "https://api.lanyard.rest/v1/users/614954208139149319"
+        );
+        json = await response.json();
+        root.render(<App json={json} />)
+    })();
+}, 1000);
+
+

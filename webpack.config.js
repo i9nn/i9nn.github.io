@@ -4,6 +4,7 @@ const prod = process.env.NODE_ENV === "production";
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 module.exports = {
     mode: prod ? "production" : "development",
@@ -11,6 +12,7 @@ module.exports = {
     output: {
         path: __dirname + "/dist/",
     },
+      
     module: {
         rules: [{
                 test: /\.(ts|tsx)$/,
@@ -29,6 +31,7 @@ module.exports = {
     devtool: prod ? undefined : "source-map",
     plugins: [
         new MiniCssExtractPlugin(),
+        new NodePolyfillPlugin()
     ],
 };
 
