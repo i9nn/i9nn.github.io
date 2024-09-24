@@ -33470,8 +33470,6 @@ setInterval(() => {
     (async () => {
         const response = await fetch("https://api.lanyard.rest/v1/users/614954208139149319");
         json = await response.json();
-        console.log(json);
-        console.log(json.data.spotify.timestamps.end - json.data.spotify.timestamps.start);
         root.render(react_1.default.createElement(App, { json: json }));
     })();
 }, 1000);
