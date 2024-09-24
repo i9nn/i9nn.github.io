@@ -1,97 +1,143 @@
 /*!*********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css ***!
   \*********************************************************************/
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap);
+/*!*************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/style.css (1) ***!
+  \*************************************************************************/
 @font-face {
   font-family: "Mona Sans";
-  src: url(16d953e2d42c311318e8.ttf) format("woff2 supports variations"), url(16d953e2d42c311318e8.ttf) format("woff2-variations");
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
+  src: url(2f40792e491758879b85.woff2);
 }
+body {
+  background: black;
+}
+
 * {
   font-family: "Mona Sans", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 200;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-*::-moz-selection {
-  background: transparent;
-}
-*::selection {
-  background: transparent;
-}
 
-body {
-  background: black;
-  height: 100vh;
-  position: absolute;
-  width: 100vw;
-  z-index: -1;
-}
-
-#warning {
-  animation: 1s ease-in-out 2s forwards fade-out;
-  position: absolute;
+main .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: black;
   color: white;
+  flex-direction: column;
   font-size: 20px;
+  font-weight: 200;
   height: 100vh;
   width: 100vw;
-  z-index: 100;
 }
-#warning p {
-  position: absolute;
-  width: 30%;
-  height: 20%;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
+main .container .profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  aspect-ratio: 3;
+  background: rgb(10, 10, 10);
+  border-radius: 10px;
+  width: 60%;
 }
-
-.speaker {
-  opacity: 0.5;
+main .container .profile .pfp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   aspect-ratio: 1;
-  height: 50%;
-  position: absolute;
-  background-image: url(19b00f63a9af0af8e185.jpg);
-  background-size: cover;
-  outline: 5px solid black;
-  outline-offset: -2px;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  pointer-events: none;
-  z-index: -5;
+  margin-left: 2.5%;
+  width: 30%;
+}
+main .container .profile .pfp img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}
+main .container .profile .pfp .circle {
+  aspect-ratio: 1;
+  border: 3px rgb(40, 40, 40) solid;
+  color: transparent;
+  height: 2vw;
+  border-radius: 100px;
+  background: red;
+  position: relative;
+  left: -17.5%;
+  bottom: -40%;
+}
+main .container .profile .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  aspect-ratio: 2;
+  margin-left: 4%;
+  height: 80%;
+  width: 60%;
+}
+main .container .profile .info h1 {
+  font-size: 300%;
+  font-weight: 800;
+  white-space: nowrap;
+}
+main .container .profile .info h2 {
+  font-size: 100%;
+  font-weight: 300;
+  white-space: nowrap;
+}
+main .container .profile .info .spotify {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgb(20, 20, 20);
+  border-radius: 5px;
+  height: 40%;
+  margin-top: 10px;
+  width: 95%;
+}
+main .container .profile .info .spotify .cover {
+  aspect-ratio: 1;
+  border-radius: 5px;
+  margin-left: 1.5%;
+  margin-right: 1.5%;
+  height: 80%;
+}
+main .container .profile .info .spotify .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  margin-left: 2%;
+  width: 60%;
+}
+main .container .profile .info .spotify .description h1 {
+  font-size: 130%;
+  font-weight: 300;
+  white-space: nowrap;
+}
+main .container .profile .info .spotify .description h2 {
+  font-size: 80%;
+  font-weight: 200;
+  white-space: nowrap;
 }
 
-h1 {
-  position: absolute;
-  color: white;
-  font-size: 300px;
-  font-weight: 100;
-  width: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  text-shadow: 0px 0px 20px rgb(255, 255, 255);
-}
-
-h2 {
-  position: absolute;
-  color: white;
-  font-size: 20px;
-  font-weight: 10;
-  width: 100%;
-  left: 50%;
-  bottom: 30%;
-  transform: translateX(-50%);
+@media screen and (max-width: 700px) {
+  * {
+    font-size: 2vw;
+  }
+  main .container .profile {
+    width: 80%;
+  }
+  main .container .profile .pfp .circle {
+    height: 3vw;
+  }
 }/*# sourceMappingURL=style.css.map */
 
 /*# sourceMappingURL=main.css.map*/
