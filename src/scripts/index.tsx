@@ -22,6 +22,17 @@ function fetchStatus(status: string) {
     }
 }
 
+function millisToTimestamp(m: number) {
+    const duration = Math.round(m);
+    const mins = Math.floor(duration / 60);
+    const secs = Math.floor(duration % 60);
+
+    let seconds = secs.toString();
+    if (secs < 10) seconds = "0" + seconds;
+
+    return mins + ":" + seconds;
+}
+
 function Spotify(props: {listening: boolean}) {
     if (props.listening) {
         let songName = json.data.spotify.song;
@@ -39,6 +50,24 @@ function Spotify(props: {listening: boolean}) {
     }
 }
 
+function Time(props: {listening: boolean}) {
+    if (props.listening) {
+        let start = Math.round(json.data.spotify.timestamps.start / 1000);
+        let end = Math.round(json.data.spotify.timestamps.end / 1000);
+        let now = Math.round(Date.now() / 1000);
+
+        return (
+            <div className="time">
+                <p>{millisToTimestamp(now - start)}</p>
+                <div className="bar">
+                    <div className="fill" style={{width: (100 - ((end - now) / (end - start) * 100)) + "%"}}></div>
+                </div>
+                <p>{millisToTimestamp(end - start)}</p>
+            </div>
+        )
+    }
+}
+
 function App(props: { json: Object }) {
     return (
         <div className="container">
@@ -48,18 +77,19 @@ function App(props: { json: Object }) {
                     <div className="circle" style={{backgroundColor: fetchStatus(json.data.discord_status)}}></div>
                 </div>
                 <div className="info">
-                    <h1>{`@${json.data.discord_user.username}`}</h1>
+                    <h1>{`${json.data.discord_user.display_name} (@${json.data.discord_user.username})`}</h1>
                     <h2>CS student, music producer, graphic designer</h2>
 
                     <Spotify listening={json.data.listening_to_spotify} />
+                    <Time listening={json.data.listening_to_spotify}/>
                 </div>
             </div>
         </div>
     )
 }
 
-let json = null;
 let root = createRoot(document.getElementById("main"));
+let json = null;
 
 setInterval(() => {
     (async() => {
@@ -67,6 +97,10 @@ setInterval(() => {
             "https://api.lanyard.rest/v1/users/614954208139149319"
         );
         json = await response.json();
+
+        console.log(json);
+        console.log(json.data.spotify.timestamps.end - json.data.spotify.timestamps.start);
+
         root.render(<App json={json} />)
     })();
 }, 1000);

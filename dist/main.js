@@ -33420,6 +33420,15 @@ function fetchStatus(status) {
         return "rgb(116, 127, 141)";
     }
 }
+function millisToTimestamp(m) {
+    const duration = Math.round(m);
+    const mins = Math.floor(duration / 60);
+    const secs = Math.floor(duration % 60);
+    let seconds = secs.toString();
+    if (secs < 10)
+        seconds = "0" + seconds;
+    return mins + ":" + seconds;
+}
 function Spotify(props) {
     if (props.listening) {
         let songName = json.data.spotify.song;
@@ -33431,6 +33440,18 @@ function Spotify(props) {
                 react_1.default.createElement("h2", null, shorten(artistName, false)))));
     }
 }
+function Time(props) {
+    if (props.listening) {
+        let start = Math.round(json.data.spotify.timestamps.start / 1000);
+        let end = Math.round(json.data.spotify.timestamps.end / 1000);
+        let now = Math.round(Date.now() / 1000);
+        return (react_1.default.createElement("div", { className: "time" },
+            react_1.default.createElement("p", null, millisToTimestamp(now - start)),
+            react_1.default.createElement("div", { className: "bar" },
+                react_1.default.createElement("div", { className: "fill", style: { width: (100 - ((end - now) / (end - start) * 100)) + "%" } })),
+            react_1.default.createElement("p", null, millisToTimestamp(end - start))));
+    }
+}
 function App(props) {
     return (react_1.default.createElement("div", { className: "container" },
         react_1.default.createElement("div", { className: "profile" },
@@ -33438,16 +33459,19 @@ function App(props) {
                 react_1.default.createElement("img", { src: `https://cdn.discordapp.com/avatars/${json.data.discord_user.id}/${json.data.discord_user.avatar}?size=1024` }),
                 react_1.default.createElement("div", { className: "circle", style: { backgroundColor: fetchStatus(json.data.discord_status) } })),
             react_1.default.createElement("div", { className: "info" },
-                react_1.default.createElement("h1", null, `@${json.data.discord_user.username}`),
+                react_1.default.createElement("h1", null, `${json.data.discord_user.display_name} (@${json.data.discord_user.username})`),
                 react_1.default.createElement("h2", null, "CS student, music producer, graphic designer"),
-                react_1.default.createElement(Spotify, { listening: json.data.listening_to_spotify })))));
+                react_1.default.createElement(Spotify, { listening: json.data.listening_to_spotify }),
+                react_1.default.createElement(Time, { listening: json.data.listening_to_spotify })))));
 }
-let json = null;
 let root = (0, client_1.createRoot)(document.getElementById("main"));
+let json = null;
 setInterval(() => {
     (async () => {
         const response = await fetch("https://api.lanyard.rest/v1/users/614954208139149319");
         json = await response.json();
+        console.log(json);
+        console.log(json.data.spotify.timestamps.end - json.data.spotify.timestamps.start);
         root.render(react_1.default.createElement(App, { json: json }));
     })();
 }, 1000);

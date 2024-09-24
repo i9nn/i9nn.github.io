@@ -34,7 +34,7 @@ main .container .profile {
   align-items: center;
   justify-content: flex-start;
   aspect-ratio: 3;
-  background: rgb(10, 10, 10);
+  background: rgb(12, 12, 12);
   border-radius: 10px;
   width: 60%;
 }
@@ -43,24 +43,25 @@ main .container .profile .pfp {
   justify-content: center;
   align-items: center;
   aspect-ratio: 1;
-  margin-left: 2.5%;
+  margin-left: 4%;
   width: 30%;
 }
 main .container .profile .pfp img {
   border-radius: 10px;
+  box-shadow: 0px 0px 50px rgb(50, 50, 50);
   height: 100%;
   width: 100%;
 }
 main .container .profile .pfp .circle {
   aspect-ratio: 1;
+  background: red;
+  border-radius: 100px;
+  bottom: -40%;
   border: 3px rgb(40, 40, 40) solid;
   color: transparent;
   height: 2vw;
-  border-radius: 100px;
-  background: red;
-  position: relative;
   left: -17.5%;
-  bottom: -40%;
+  position: relative;
 }
 main .container .profile .info {
   display: flex;
@@ -91,7 +92,7 @@ main .container .profile .info .spotify {
   background: rgb(20, 20, 20);
   border-radius: 5px;
   height: 40%;
-  margin-top: 10px;
+  margin-top: 5%;
   width: 95%;
 }
 main .container .profile .info .spotify .cover {
@@ -120,6 +121,29 @@ main .container .profile .info .spotify .description h2 {
   font-size: 80%;
   font-weight: 200;
   white-space: nowrap;
+}
+main .container .profile .info .time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 10%;
+  margin-top: 2%;
+  width: 96%;
+}
+main .container .profile .info .time .bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgb(40, 40, 40);
+  height: 10%;
+  margin: 2%;
+  width: 80%;
+}
+main .container .profile .info .time .bar .fill {
+  background: rgb(80, 80, 80);
+  height: 100%;
 }
 
 @media screen and (max-width: 700px) {
