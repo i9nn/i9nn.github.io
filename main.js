@@ -33470,6 +33470,7 @@ setInterval(() => {
     (async () => {
         const response = await fetch("https://api.lanyard.rest/v1/users/614954208139149319");
         json = await response.json();
+        console.log(json);
         root.render(react_1.default.createElement(App, { json: json }));
     })();
 }, 1000);
