@@ -99,7 +99,6 @@ setInterval(() => {
         json = await response.json();
 
         console.log(json);
-        console.log(json.data.spotify.timestamps.end - json.data.spotify.timestamps.start);
 
         root.render(<App json={json} />)
     })();
