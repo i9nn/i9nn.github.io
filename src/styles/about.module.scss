@@ -1,0 +1,53 @@
+@mixin flex {
+    align-items: flex-start;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.main {
+    background: black;
+    height: 100vh;
+    width: 100vw;
+
+    .container {
+        @include flex;
+
+        background: black;
+        flex-direction: column;
+        padding-top: 5%;
+
+        .title {
+            @include flex;
+            background: black;
+            color: white;
+            font-size: 4vh;
+            height: 2%;
+            margin-left: 8%;
+            overflow-x: hidden;
+            transition: background 0.2s, color 0.2s, font-weight 0.2s, padding-left 0.2s;
+            width: 70%;
+
+            .rating {
+                font-size: 4vh;
+                padding-left: 2%;
+                transition: color 0.2s;
+                width: 10%;
+            }
+
+            &:first-of-type {
+                margin-top: 3%;
+            }
+
+            &:hover {
+                background: white;
+                color: black;
+                font-weight: 800;
+                padding-left: 5%;
+
+                .rating {
+                    color: black;
+                }
+            }
+        }
+    }
+}

@@ -3,7 +3,7 @@ import Head from "next/head";
 export default function Header() {
     return (
         <Head>
-            <title>iangaunt.dev</title>
+            <title>i9nn.com</title>
         </Head>
     )
 }

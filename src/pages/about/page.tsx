@@ -1,22 +1,24 @@
 import Navbar from "@/components/Navbar";
-import styles from "@/styles/index.module.css"
+import styles from "@/styles/about.module.css"
 import Template from "../template";
-import Header from "@/components/Head";
+import Head from "@/components/Head";
+import Album from "@/components/Album";
 
 export default function About() {
 	return (
 		<>
-		    <Header />
-			
-			<Navbar></Navbar>
-				<main className={styles.main}>
-					<Template >
-						<div className={styles.title}>
-							<h1>About Page</h1>
-                            <h2>Here is another page!</h2>
-						</div>
-					</Template>
-				</main>
+		    <Head />
+
+			<main className={styles.main}>
+				<Template >
+					<div className={styles.container}>
+						<Navbar></Navbar>
+
+						<Album date="January 2" name="Pop 2" artist="Charli XCX" score={8} />
+						<Album date="January 3" name="Karma" artist="Pharaoh Sanders" score={9} />
+					</div>
+				</Template>
+			</main>
 		</>
 	);
 }

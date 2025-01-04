@@ -1,21 +1,20 @@
-import Navbar from "@/components/Navbar";
 import styles from "@/styles/index.module.css"
+
+import Head from "@/components/Head";
+import Modal from "@/components/Modal";
 import Template from "./template";
-import Header from "@/components/Head";
 
 export default function Landing() {
 	return (
-		<>
-		    <Header />
-			
-			<Navbar></Navbar>
-				<main className={styles.main}>
-					<Template >
-						<div className={styles.title}>
-							<h1>Ian's Next Template</h1>
-						</div>
-					</Template>
-				</main>
-		</>
+        <>
+            <Head />
+            <div className={styles.bg}>
+                <Template>
+                    <main className={styles.main}>
+                        <Modal />
+                    </main>
+                </Template>
+            </div>
+        </>
 	);
 }
