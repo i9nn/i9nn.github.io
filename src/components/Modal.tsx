@@ -43,8 +43,7 @@ export default function Model() {
                     const response = await fetch(
                         "https://api.lanyard.rest/v1/users/614954208139149319"
                     );
-                    let result = await response.json();
-                    // console.log(result);
+                    const result = await response.json();
                     setJSON(result);
                     setLoaded(true);
                     
